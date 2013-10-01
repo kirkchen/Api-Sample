@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.Http.zh-Hant</id>
+    <version>2.0.20710.0</version>
+    <title>Microsoft .NET Framework 4 HTTP Client Libraries 繁體中文 資源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/MVC_4_CHT.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/web-api</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>此套件包含 Microsoft .NET Framework 4 HTTP Client Libraries 的 繁體中文 附屬組件。</description>
+    <summary>Microsoft.Net.Http 套件的 繁體中文 資源</summary>
+    <language>zh-Hant</language>
+    <dependencies>
+      <dependency id="Microsoft.Net.Http" version="[2.0.20710.0]" />
+    </dependencies>
+  </metadata>
+</package>
