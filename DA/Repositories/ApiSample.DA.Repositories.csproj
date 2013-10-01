@@ -7,8 +7,8 @@
     <ProjectGuid>{C471E2DB-A4EC-48DD-8F8E-5CADBE8B573D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApiSample.DA.Repository</RootNamespace>
-    <AssemblyName>ApiSample.DA.Repository</AssemblyName>
+    <RootNamespace>ApiSample.DA.Repositories</RootNamespace>
+    <AssemblyName>ApiSample.DA.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

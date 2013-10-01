@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E004C6A4-BB22-4FEB-A5AA-D246B870EC6C}</ProjectGuid>
+    <ProjectGuid>{88AC2472-843C-47B6-940A-B8BB2CD0923F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApiSample.Model</RootNamespace>
-    <AssemblyName>ApiSample.Model</AssemblyName>
+    <RootNamespace>ApiSample.BL.Services</RootNamespace>
+    <AssemblyName>ApiSample.BL.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
