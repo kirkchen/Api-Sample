@@ -40,6 +40,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DA\Interfaces\ApiSample.DA.Interfaces.csproj">
+      <Project>{62765fcf-1b3d-49da-8452-2586baa170bc}</Project>
+      <Name>ApiSample.DA.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DA\Repositories\ApiSample.DA.Repositories.csproj">
+      <Project>{c471e2db-a4ec-48dd-8f8e-5cadbe8b573d}</Project>
+      <Name>ApiSample.DA.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
+      <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
+      <Name>ApiSample.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intefaces\ApiSample.BL.Interfaces.csproj">
+      <Project>{a1d949fa-e621-486d-bfb5-adc91426b2f2}</Project>
+      <Name>ApiSample.BL.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

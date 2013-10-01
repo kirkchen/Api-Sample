@@ -126,6 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,11 +219,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BL\Intefaces\ApiSample.BL.Interfaces.csproj">
+      <Project>{a1d949fa-e621-486d-bfb5-adc91426b2f2}</Project>
+      <Name>ApiSample.BL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BL\Services\ApiSample.BL.Services.csproj">
+      <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
+      <Name>ApiSample.BL.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
+      <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
+      <Name>ApiSample.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
