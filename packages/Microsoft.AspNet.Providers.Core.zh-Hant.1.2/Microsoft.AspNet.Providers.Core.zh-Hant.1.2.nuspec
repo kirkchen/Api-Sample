@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Providers.Core.zh-Hant</id>
+    <version>1.2</version>
+    <title>Microsoft ASP.NET Universal Providers 核心程式庫繁體中文資源</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/Providers_1_eula_CHT.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>這個套件包含適用於 ASP.NET Universal Providers 的繁體中文附屬組件。</description>
+    <summary>適用於 Microsoft.AspNet.Providers.Core 套件的繁體中文資源</summary>
+    <language>zh-Hant</language>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Providers.Core" version="[1.2]" />
+    </dependencies>
+  </metadata>
+</package>
