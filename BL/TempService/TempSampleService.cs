@@ -7,20 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApiSample.BL.Services
+namespace ApiSample.BL.TempServices
 {
-    public class SampleService : ISampleService
+    public class TempSampleService : ISampleService
     {
         public ISampleRepository SampleRepository { get; set; }        
 
-        public SampleService(ISampleRepository sampleRepository)
+        public TempSampleService(ISampleRepository sampleRepository)
         {
             this.SampleRepository = sampleRepository;
         }
 
         public IEnumerable<SampleModel> GetSamples()
         {
-            return this.SampleRepository.GetSamples();
+            return this.SampleRepository.GetSamples().Take(3);
         }
     }
 }
