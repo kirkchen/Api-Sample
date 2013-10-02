@@ -242,10 +242,6 @@
       <Project>{c14278c6-0830-4f56-bc7e-4b483daf8024}</Project>
       <Name>ApiSample.BL.Modules</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\BL\TempService\ApiSample.BL.TempServices.csproj">
-      <Project>{532f1cd2-0ccd-4aea-81c0-9ec254379da7}</Project>
-      <Name>ApiSample.BL.TempServices</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\DA\Modules\ApiSample.DA.Modules.csproj">
       <Project>{0278372b-9e81-47a4-b1d8-a58797fb32a0}</Project>
       <Name>ApiSample.DA.Modules</Name>
