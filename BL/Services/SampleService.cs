@@ -1,6 +1,5 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.DA.Interfaces;
-using ApiSample.DA.Repositories;
 using ApiSample.Models;
 using System;
 using System.Collections.Generic;
@@ -12,12 +11,7 @@ namespace ApiSample.BL.Services
 {
     public class SampleService : ISampleService
     {
-        public ISampleRepository SampleRepository { get; set; }
-
-        public SampleService()
-            : this(new SampleRepository())
-        {
-        }
+        public ISampleRepository SampleRepository { get; set; }        
 
         public SampleService(ISampleRepository sampleRepository)
         {

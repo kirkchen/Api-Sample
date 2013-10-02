@@ -1,5 +1,4 @@
 ﻿using ApiSample.BL.Interfaces;
-using ApiSample.BL.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +9,7 @@ namespace ApiSample.UI.WebSite.Controllers
 {
     public class SampleController : Controller
     {
-        public ISampleService SampleService { get; set; }
-
-        public SampleController()
-            :this(new SampleService())
-        {
-        }
+        public ISampleService SampleService { get; set; }        
 
         public SampleController(ISampleService sampleService)
         {

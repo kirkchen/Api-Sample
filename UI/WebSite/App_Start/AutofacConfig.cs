@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Autofac.Configuration;
 using Autofac.Integration.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,9 @@ namespace ApiSample.UI.WebSite
             var builder = new ContainerBuilder();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
+            //// Read autofac settings from config
+            builder.RegisterModule(new ConfigurationSettingsReader());
             
             var container = builder.Build();
             
