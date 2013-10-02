@@ -18,6 +18,7 @@ namespace ApiSample.UI.WebSite
         {
             AreaRegistration.RegisterAllAreas();
 
+            AutofacConfig.Initialize();
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
