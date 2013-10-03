@@ -9,6 +9,11 @@ namespace ApiSample.DA.Tables
 {
     public class ShopContext : DbContext
     {
+        public ShopContext()
+            //:base("Shop")
+        {
+        }
+
         public IDbSet<Category> Categories { get; set; }
 
         public IDbSet<Product> Products { get; set; }

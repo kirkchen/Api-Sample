@@ -22,6 +22,10 @@ namespace ApiSample.DA.Tables
         [StringLength(1000)]
         public string Description { get; set; }
 
+        public DateTime ListingStartTime { get; set; }
+
+        public DateTime ListingEndTime { get; set; }
+
         public DateTime SellingStartTime { get; set; }
 
         public DateTime SellingEndTime { get; set; }

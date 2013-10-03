@@ -49,6 +49,10 @@
     <Compile Include="Migrations\201310030903356_CreateDatabase.Designer.cs">
       <DependentUpon>201310030903356_CreateDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310030924535_AddProductListingTime.cs" />
+    <Compile Include="Migrations\201310030924535_AddProductListingTime.Designer.cs">
+      <DependentUpon>201310030924535_AddProductListingTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,7 +66,11 @@
     <EmbeddedResource Include="Migrations\201310030903356_CreateDatabase.resx">
       <DependentUpon>201310030903356_CreateDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310030924535_AddProductListingTime.resx">
+      <DependentUpon>201310030924535_AddProductListingTime.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
