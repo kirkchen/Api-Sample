@@ -9,8 +9,7 @@ namespace ApiSample.DA.Tables
 {
     public class ShopContext : DbContext
     {
-        public ShopContext()
-            //:base("Shop")
+        public ShopContext()            
         {
         }
 
