@@ -14,55 +14,19 @@ namespace ApiSample.DA.Tables.Migrations
         }
 
         protected override void Seed(ApiSample.DA.Tables.ShopContext context)
-        {
-            context.Categories.AddOrUpdate(
-                i => i.Name,
-                new Category()
-                {
-                    Name = "¦WµP¥]¥]",
-                    Categories = new List<Category>()
-                    {
-                        new Category() 
-                        {
-                            Name= "Gucci",
-                            Products = new List<Product>() 
-                            {
-                                new Product()
-                                {
-                                    Name = "Gucci - 1",
-                                    Price = 200,
-                                    Cost = 100,                                     
-                                    SellingStartTime = DateTime.Now,
-                                    SellingEndTime = DateTime.Now.AddYears(1)
-                                }
-                            }
-                        },
-                        new Category() 
-                        {
-                            Name = "Prada",
-                            Products = new List<Product>() 
-                            {
-                                new Product()
-                                {
-                                    Name = "Prada - 1",
-                                    Price = 200,
-                                    Cost = 100,                                     
-                                    SellingStartTime = DateTime.Now,
-                                    SellingEndTime = DateTime.Now.AddYears(1)
-                                },
-                                new Product()
-                                {
-                                    Name = "Prada - 2",
-                                    Price = 200,
-                                    Cost = 100,                                     
-                                    SellingStartTime = DateTime.Now,
-                                    SellingEndTime = DateTime.Now.AddYears(1)
-                                }
-                            }
-                        }
-                    }
-                }
-            );           
+        {            
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
         }
     }
 }
