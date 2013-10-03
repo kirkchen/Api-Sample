@@ -136,6 +136,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,7 +216,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -242,9 +245,17 @@
       <Project>{c14278c6-0830-4f56-bc7e-4b483daf8024}</Project>
       <Name>ApiSample.BL.Modules</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\BL\Services\ApiSample.BL.Services.csproj">
+      <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
+      <Name>ApiSample.BL.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DA\Modules\ApiSample.DA.Modules.csproj">
       <Project>{0278372b-9e81-47a4-b1d8-a58797fb32a0}</Project>
       <Name>ApiSample.DA.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DA\Repositories\ApiSample.DA.Repositories.csproj">
+      <Project>{c471e2db-a4ec-48dd-8f8e-5cadbe8b573d}</Project>
+      <Name>ApiSample.DA.Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
       <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>

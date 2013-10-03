@@ -33,8 +33,14 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.3.1.1\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +52,7 @@
     <Compile Include="RepositoryModule.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +63,10 @@
     <ProjectReference Include="..\Repositories\ApiSample.DA.Repositories.csproj">
       <Project>{c471e2db-a4ec-48dd-8f8e-5cadbe8b573d}</Project>
       <Name>ApiSample.DA.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tables\ApiSample.DA.Tables.csproj">
+      <Project>{1fa1d04c-e072-40aa-8854-3e437f88fdbf}</Project>
+      <Name>ApiSample.DA.Tables</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
