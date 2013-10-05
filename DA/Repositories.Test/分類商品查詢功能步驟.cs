@@ -12,20 +12,25 @@ namespace ApiSample.DA.Repositories.Test
     [Binding]
     public class 分類商品查詢功能步驟
     {
-        //private ShopContext shopContext;
+        private ShopContext shopContext;
 
         private int queryCategoryId;
 
         private IEnumerable<ProductForCategoryModel> productResult;
 
-        private ProductRepository productRepository;       
+        private ProductRepository productRepository;
 
-        [Given(@"清空資料庫")]
-        public void 假設清空資料庫()
+        [BeforeScenario]
+        public void ScenarioSetup()
         {
-            var shopContext = new ShopContext();
-            shopContext.Database.Delete();
-            shopContext.Dispose();
+            this.shopContext = new ShopContext();
+            this.shopContext.Database.Delete();
+        }
+
+        [AfterScenario]
+        public void SecnarioTeardown()
+        {
+            this.shopContext.Dispose();
         }
 
         [Given(@"資料庫中有分類資料")]
@@ -33,15 +38,12 @@ namespace ApiSample.DA.Repositories.Test
         {
             var categories = table.CreateSet<Category>();
 
-            using (ShopContext shopContext = new ShopContext())
+            foreach (var category in categories)
             {
-                foreach (var category in categories)
-                {
-                    shopContext.Categories.Add(category);
-                }
-
-                shopContext.SaveChanges();
+                this.shopContext.Categories.Add(category);
             }
+
+            this.shopContext.SaveChanges();
         }
 
         [Given(@"資料庫中有產品資料")]
@@ -49,15 +51,12 @@ namespace ApiSample.DA.Repositories.Test
         {
             var products = table.CreateSet<Product>();
 
-            using (ShopContext shopContext = new ShopContext())
+            foreach (var product in products)
             {
-                foreach (var product in products)
-                {                    
-                    shopContext.Products.Add(product);
-                }
-
-                shopContext.SaveChanges();
+                this.shopContext.Products.Add(product);
             }
+
+            this.shopContext.SaveChanges();
         }
 
         [Given(@"當查詢分類(.*)的商品時")]
@@ -69,15 +68,12 @@ namespace ApiSample.DA.Repositories.Test
         [When(@"執行分類商品查詢")]
         public void 當執行分類商品查詢()
         {
-            using (ShopContext shopContext = new ShopContext())
+            if (this.productRepository == null)
             {
-                if (this.productRepository == null)
-                {
-                    this.productRepository = new ProductRepository(shopContext);
-                }
-
-                this.productResult = this.productRepository.GetProductByCategoryId(this.queryCategoryId).ToList();
+                this.productRepository = new ProductRepository(this.shopContext);
             }
+
+            this.productResult = this.productRepository.GetProductByCategoryId(this.queryCategoryId).ToList();
         }
 
         [Then(@"得到商品")]

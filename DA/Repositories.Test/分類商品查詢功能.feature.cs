@@ -65,8 +65,6 @@ namespace ApiSample.DA.Repositories.Test
         public virtual void FeatureBackground()
         {
 #line 6
-#line 7
- testRunner.Given("清空資料庫", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Id",
@@ -77,70 +75,70 @@ namespace ApiSample.DA.Repositories.Test
             table1.AddRow(new string[] {
                         "2",
                         "Drinks"});
-#line 8
+#line 7
  testRunner.Given("資料庫中有分類資料", ((string)(null)), table1, "假設");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CategoryId",
                         "Name",
                         "Price",
                         "Cost",
                         "ListingStartTime",
                         "ListingEndTime",
                         "SellingStartTime",
-                        "SellingEndTime",
-                        "CategoryId"});
+                        "SellingEndTime"});
             table2.AddRow(new string[] {
+                        "1",
                         "Hamburger",
                         "99",
                         "50",
                         "2013-10-01",
                         "2014-10-01",
                         "2013-10-01",
-                        "2014-10-01",
-                        "1"});
+                        "2014-10-01"});
             table2.AddRow(new string[] {
+                        "1",
                         "Sandwitch",
                         "89",
                         "40",
                         "2013-10-01",
                         "2014-10-01",
                         "2013-10-01",
-                        "2014-10-01",
-                        "1"});
+                        "2014-10-01"});
             table2.AddRow(new string[] {
+                        "2",
                         "Orange Juice",
                         "40",
                         "20",
                         "2013-10-01",
                         "2014-11-01",
                         "2013-10-01",
-                        "2014-10-01",
-                        "2"});
+                        "2014-10-01"});
             table2.AddRow(new string[] {
+                        "2",
                         "Milk",
                         "35",
                         "20",
                         "2013-11-01",
                         "2014-11-01",
                         "2013-11-01",
-                        "2014-10-01",
-                        "2"});
-#line 12
+                        "2014-10-01"});
+#line 11
  testRunner.And("資料庫中有產品資料", ((string)(null)), table2, "並且");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("根據分類序號查詢商品，假設分類下所有商品上架時間都符合，查詢得到所有商品", SourceLine=18)]
+        [TechTalk.SpecRun.ScenarioAttribute("根據分類序號查詢商品，假設分類下所有商品上架時間都符合，查詢得到所有商品", SourceLine=17)]
         public virtual void 根據分類序號查詢商品假設分類下所有商品上架時間都符合查詢得到所有商品()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("根據分類序號查詢商品，假設分類下所有商品上架時間都符合，查詢得到所有商品", ((string[])(null)));
-#line 19
+#line 18
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 20
+#line 19
  testRunner.Given("當查詢分類1的商品時", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
-#line 21
+#line 20
  testRunner.When("執行分類商品查詢", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -152,23 +150,23 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "Sandwitch",
                         "89"});
-#line 22
+#line 21
  testRunner.Then("得到商品", ((string)(null)), table3, "那麼");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("根據分類序號查詢商品，假設分類下有商品上架時間還沒到，查詢得到符合的商品", SourceLine=26)]
+        [TechTalk.SpecRun.ScenarioAttribute("根據分類序號查詢商品，假設分類下有商品上架時間還沒到，查詢得到符合的商品", SourceLine=25)]
         public virtual void 根據分類序號查詢商品假設分類下有商品上架時間還沒到查詢得到符合的商品()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("根據分類序號查詢商品，假設分類下有商品上架時間還沒到，查詢得到符合的商品", ((string[])(null)));
-#line 27
+#line 26
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 28
+#line 27
  testRunner.Given("當查詢分類2的商品時", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
-#line 29
+#line 28
  testRunner.When("執行分類商品查詢", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -177,7 +175,7 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "Orange Juice",
                         "40"});
-#line 30
+#line 29
  testRunner.Then("得到商品", ((string)(null)), table4, "那麼");
 #line hidden
             this.ScenarioCleanup();
