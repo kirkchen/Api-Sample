@@ -31,6 +31,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSample.DA.Tables", "DA\T
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TableSchemas", "DA\TableSchemas\TableSchemas.modelproj", "{EA6C485D-7371-42C6-B33F-D2A97F188D29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSample.DA.Repositories.Test", "DA\Repositories.Test\ApiSample.DA.Repositories.Test.csproj", "{A331A150-069C-42AA-AD4D-CEAEF2F5200A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6476DEAD-9AB9-4CF4-B0CE-8F28857BD4B5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +84,10 @@ Global
 		{EA6C485D-7371-42C6-B33F-D2A97F188D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6C485D-7371-42C6-B33F-D2A97F188D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6C485D-7371-42C6-B33F-D2A97F188D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A331A150-069C-42AA-AD4D-CEAEF2F5200A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A331A150-069C-42AA-AD4D-CEAEF2F5200A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A331A150-069C-42AA-AD4D-CEAEF2F5200A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A331A150-069C-42AA-AD4D-CEAEF2F5200A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +101,7 @@ Global
 		{62765FCF-1B3D-49DA-8452-2586BAA170BC} = {0EF29B5C-F338-44AC-A3C3-202DF550083C}
 		{0278372B-9E81-47A4-B1D8-A58797FB32A0} = {0EF29B5C-F338-44AC-A3C3-202DF550083C}
 		{1FA1D04C-E072-40AA-8854-3E437F88FDBF} = {0EF29B5C-F338-44AC-A3C3-202DF550083C}
+		{A331A150-069C-42AA-AD4D-CEAEF2F5200A} = {0EF29B5C-F338-44AC-A3C3-202DF550083C}
 		{E004C6A4-BB22-4FEB-A5AA-D246B870EC6C} = {ACEAB0E6-C6B1-4DD1-ACE6-BCAA500D2E86}
 	EndGlobalSection
 EndGlobal
