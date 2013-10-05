@@ -15,9 +15,13 @@ namespace ApiSample.DA.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
+            //// Register Repositories
             var repository = Assembly.Load("ApiSample.DA.Repositories");
-
             builder.RegisterAssemblyTypes(repository).AsImplementedInterfaces();
+
+            //// Register Hooks
+            var hooks = Assembly.Load("ApiSample.Utility.Hooks");
+            builder.RegisterAssemblyTypes(hooks).AsImplementedInterfaces();
 
             builder.RegisterType<ShopContext>().As<ShopContext>();
         }

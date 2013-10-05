@@ -17,6 +17,8 @@ namespace ApiSample.UI.WebSite
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
+            builder.RegisterModule(new AutofacWebTypesModule());
+
             //// Read autofac settings from config
             builder.RegisterModule(new ConfigurationSettingsReader());
             

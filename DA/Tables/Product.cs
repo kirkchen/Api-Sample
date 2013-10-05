@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ApiSample.DA.Tables
 {
-    public class Product
+    public class Product : EntityBase
     {
         [Key]
         public int Id { get; set; }

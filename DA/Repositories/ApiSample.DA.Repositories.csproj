@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EFHooks">
+      <HintPath>..\..\packages\Atreyu.EFHooks.1.0.5.4\lib\net45\EFHooks.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -52,6 +55,10 @@
     <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
       <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
       <Name>ApiSample.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
+      <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>
+      <Name>ApiSample.Utility.Hooks</Name>
     </ProjectReference>
     <ProjectReference Include="..\Interfaces\ApiSample.DA.Interfaces.csproj">
       <Project>{62765fcf-1b3d-49da-8452-2586baa170bc}</Project>
