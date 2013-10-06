@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using EFHooks;
+using System.Web;
+using Rhino.Mocks;
+using System.Security.Principal;
 
 namespace ApiSample.DA.Repositories.Test
 {
@@ -23,7 +27,7 @@ namespace ApiSample.DA.Repositories.Test
         [BeforeScenario]
         public void ScenarioSetup()
         {
-            this.shopContext = new ShopContext();
+            this.shopContext = new ShopContext(new List<IPreActionHook>());
             this.shopContext.Database.Delete();
         }
 
@@ -80,7 +84,6 @@ namespace ApiSample.DA.Repositories.Test
         public void 那麼得到商品(Table table)
         {
             table.CompareToSet<ProductForCategoryModel>(this.productResult);
-        }
-
+        }       
     }
 }

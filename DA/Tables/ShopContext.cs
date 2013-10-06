@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EFHooks;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,10 +8,25 @@ using System.Threading.Tasks;
 
 namespace ApiSample.DA.Tables
 {
-    public class ShopContext : DbContext
+    public class ShopContext : HookedDbContext
     {
-        public ShopContext()            
+        /// <summary>
+        /// For update-database by package management console
+        /// </summary>
+        public ShopContext()       
         {
+        }
+
+        /// <summary>
+        /// For runtime
+        /// </summary>
+        /// <param name="hooks"></param>
+        public ShopContext(IEnumerable<IPreActionHook> hooks)            
+        {
+            foreach (var hook in hooks)
+            {
+                this.RegisterHook(hook);
+            }
         }
 
         public IDbSet<Category> Categories { get; set; }
