@@ -1,0 +1,62 @@
+﻿Appdomain Disposed
+Test Suite Dump
+#0: Hooks.Test/Default - 
+#1: Default - 
+#2: Hooks.Test - 
+#3: 儲存資料自動更新系統資訊功能 - 
+#4: 執行新增分類後，分類儲存會自動帶入使用者名稱 - TestAssembly:Hooks.Test/Feature:%e5%84%b2%e5%ad%98%e8%b3%87%e6%96%99%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e7%b3%bb%e7%b5%b1%e8%b3%87%e8%a8%8a%e5%8a%9f%e8%83%bd/Scenario:%e5%9f%b7%e8%a1%8c%e6%96%b0%e5%a2%9e%e5%88%86%e9%a1%9e%e5%be%8c%ef%bc%8c%e5%88%86%e9%a1%9e%e5%84%b2%e5%ad%98%e6%9c%83%e8%87%aa%e5%8b%95%e5%b8%b6%e5%85%a5%e4%bd%bf%e7%94%a8%e8%80%85%e5%90%8d%e7%a8%b1
+#5: 執行更新分類後，分類更新資訊會自動帶入使用者名稱 - TestAssembly:Hooks.Test/Feature:%e5%84%b2%e5%ad%98%e8%b3%87%e6%96%99%e8%87%aa%e5%8b%95%e6%9b%b4%e6%96%b0%e7%b3%bb%e7%b5%b1%e8%b3%87%e8%a8%8a%e5%8a%9f%e8%83%bd/Scenario:%e5%9f%b7%e8%a1%8c%e6%9b%b4%e6%96%b0%e5%88%86%e9%a1%9e%e5%be%8c%ef%bc%8c%e5%88%86%e9%a1%9e%e6%9b%b4%e6%96%b0%e8%b3%87%e8%a8%8a%e6%9c%83%e8%87%aa%e5%8b%95%e5%b8%b6%e5%85%a5%e4%bd%bf%e7%94%a8%e8%80%85%e5%90%8d%e7%a8%b1
+End: Test Suite Dump
+Scheduler: considering #4 for thread #0
+Scheduler: using #4 for thread #0
+Test #4 is scheduled for thread #0
+Thread #0: creating new test thread executor for Hooks.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Users\kirkchen\AppData\Local\Temp\VisualStudioTestExplorerExtensions\SpecRun.Runner.1.2.0\tools\TechTalk.SpecRun.Framework.Executor.dll
+Test #4/0 is started on thread #0
+B:假設目前登入的使用者為Kirk
+T:done: 分類商品查詢功能步驟.假設目前登入的使用者為("Kirk") (0.2s)
+B:並且ShopContext當更新時會自動更新系統資訊
+T:done: 分類商品查詢功能步驟.假設ShopContext當更新時會自動更新系統資訊() (0.0s)
+B:假設新增分類資料
+B:  --- table step argument ---
+B:  | Name   |
+B:  | Fruits |
+T:done: 分類商品查詢功能步驟.假設新增分類資料(<table>) (0.7s)
+B:當新增完畢
+T:done: 分類商品查詢功能步驟.當新增完畢() (0.0s)
+B:那麼資料庫中包含資料
+B:  --- table step argument ---
+B:  | Name   | CreatedBy | UpdatedBy |
+B:  | Fruits | Kirk      | Kirk      |
+T:done: 分類商品查詢功能步驟.那麼資料庫中包含資料(<table>) (0.0s)
+Scheduler: considering #5 for thread #0
+Scheduler: using #5 for thread #0
+Test #5 is scheduled for thread #0
+Test #4 is finished on thread #0 as Succeeded within 1.5490886 seconds
+Test #5/0 is started on thread #0
+B:假設目前登入的使用者為Kirk
+T:done: 分類商品查詢功能步驟.假設目前登入的使用者為("Kirk") (0.0s)
+B:並且ShopContext當更新時會自動更新系統資訊
+T:done: 分類商品查詢功能步驟.假設ShopContext當更新時會自動更新系統資訊() (0.0s)
+B:假設新增分類資料
+B:  --- table step argument ---
+B:  | Name   |
+B:  | Fruits |
+T:done: 分類商品查詢功能步驟.假設新增分類資料(<table>) (0.5s)
+B:假設更換使用者為David
+T:done: 分類商品查詢功能步驟.假設更換使用者為("David") (0.0s)
+B:當更新分類名字為Fruit
+T:done: 分類商品查詢功能步驟.當更新分類資料("Fruit") (0.0s)
+B:那麼資料庫中包含資料
+B:  --- table step argument ---
+B:  | Name  | CreatedBy | UpdatedBy |
+B:  | Fruit | Kirk      | David     |
+T:done: 分類商品查詢功能步驟.那麼資料庫中包含資料(<table>) (0.0s)
+Test #5 is finished on thread #0 as Succeeded within 0.5280302 seconds
+Appdomain Disposed
+Total: 2
+Succeeded: 2
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 0

@@ -1,0 +1,75 @@
+﻿Appdomain Disposed
+Test Suite Dump
+#0: Repositories.Test/Default - 
+#1: Default - 
+#2: ApiSample.DA.Repositories.Test - 
+#3: 分類商品查詢功能 - 
+#4: 根據分類序號查詢商品，假設分類下所有商品上架時間都符合，查詢得到所有商品 - TestAssembly:ApiSample.DA.Repositories.Test/Feature:%e5%88%86%e9%a1%9e%e5%95%86%e5%93%81%e6%9f%a5%e8%a9%a2%e5%8a%9f%e8%83%bd/Scenario:%e6%a0%b9%e6%93%9a%e5%88%86%e9%a1%9e%e5%ba%8f%e8%99%9f%e6%9f%a5%e8%a9%a2%e5%95%86%e5%93%81%ef%bc%8c%e5%81%87%e8%a8%ad%e5%88%86%e9%a1%9e%e4%b8%8b%e6%89%80%e6%9c%89%e5%95%86%e5%93%81%e4%b8%8a%e6%9e%b6%e6%99%82%e9%96%93%e9%83%bd%e7%ac%a6%e5%90%88%ef%bc%8c%e6%9f%a5%e8%a9%a2%e5%be%97%e5%88%b0%e6%89%80%e6%9c%89%e5%95%86%e5%93%81
+#5: 根據分類序號查詢商品，假設分類下有商品上架時間還沒到，查詢得到符合的商品 - TestAssembly:ApiSample.DA.Repositories.Test/Feature:%e5%88%86%e9%a1%9e%e5%95%86%e5%93%81%e6%9f%a5%e8%a9%a2%e5%8a%9f%e8%83%bd/Scenario:%e6%a0%b9%e6%93%9a%e5%88%86%e9%a1%9e%e5%ba%8f%e8%99%9f%e6%9f%a5%e8%a9%a2%e5%95%86%e5%93%81%ef%bc%8c%e5%81%87%e8%a8%ad%e5%88%86%e9%a1%9e%e4%b8%8b%e6%9c%89%e5%95%86%e5%93%81%e4%b8%8a%e6%9e%b6%e6%99%82%e9%96%93%e9%82%84%e6%b2%92%e5%88%b0%ef%bc%8c%e6%9f%a5%e8%a9%a2%e5%be%97%e5%88%b0%e7%ac%a6%e5%90%88%e7%9a%84%e5%95%86%e5%93%81
+End: Test Suite Dump
+Scheduler: considering #4 for thread #0
+Scheduler: using #4 for thread #0
+Test #4 is scheduled for thread #0
+Thread #0: creating new test thread executor for ApiSample.DA.Repositories.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Users\kirkchen\AppData\Local\Temp\VisualStudioTestExplorerExtensions\SpecRun.Runner.1.2.0\tools\TechTalk.SpecRun.Framework.Executor.dll
+Test #4/0 is started on thread #0
+B:假設資料庫中有分類資料
+B:  --- table step argument ---
+B:  | Id | Name   |
+B:  | 1  | Foods  |
+B:  | 2  | Drinks |
+T:done: 分類商品查詢功能步驟.假設資料庫中有分類資料(<table>) (0.7s)
+B:並且資料庫中有產品資料
+B:  --- table step argument ---
+B:  | CategoryId | Name         | Price | Cost | ListingStartTime | ListingEndTime | SellingStartTime | SellingEndTime |
+B:  | 1          | Hamburger    | 99    | 50   | 2013-10-01       | 2014-10-01     | 2013-10-01       | 2014-10-01     |
+B:  | 1          | Sandwitch    | 89    | 40   | 2013-10-01       | 2014-10-01     | 2013-10-01       | 2014-10-01     |
+B:  | 2          | Orange Juice | 40    | 20   | 2013-10-01       | 2014-11-01     | 2013-10-01       | 2014-10-01     |
+B:  | 2          | Milk         | 35    | 20   | 2013-11-01       | 2014-11-01     | 2013-11-01       | 2014-10-01     |
+T:done: 分類商品查詢功能步驟.假設資料庫中有產品資料(<table>) (0.0s)
+B:假設當查詢分類1的商品時
+T:done: 分類商品查詢功能步驟.假設當查詢分類的商品時(1) (0.0s)
+B:當執行分類商品查詢
+T:done: 分類商品查詢功能步驟.當執行分類商品查詢() (0.0s)
+B:那麼得到商品
+B:  --- table step argument ---
+B:  | Name      | Price |
+B:  | Hamburger | 99    |
+B:  | Sandwitch | 89    |
+T:done: 分類商品查詢功能步驟.那麼得到商品(<table>) (0.0s)
+Scheduler: considering #5 for thread #0
+Scheduler: using #5 for thread #0
+Test #5 is scheduled for thread #0
+Test #4 is finished on thread #0 as Succeeded within 1.3070747 seconds
+Test #5/0 is started on thread #0
+B:假設資料庫中有分類資料
+B:  --- table step argument ---
+B:  | Id | Name   |
+B:  | 1  | Foods  |
+B:  | 2  | Drinks |
+T:done: 分類商品查詢功能步驟.假設資料庫中有分類資料(<table>) (0.5s)
+B:並且資料庫中有產品資料
+B:  --- table step argument ---
+B:  | CategoryId | Name         | Price | Cost | ListingStartTime | ListingEndTime | SellingStartTime | SellingEndTime |
+B:  | 1          | Hamburger    | 99    | 50   | 2013-10-01       | 2014-10-01     | 2013-10-01       | 2014-10-01     |
+B:  | 1          | Sandwitch    | 89    | 40   | 2013-10-01       | 2014-10-01     | 2013-10-01       | 2014-10-01     |
+B:  | 2          | Orange Juice | 40    | 20   | 2013-10-01       | 2014-11-01     | 2013-10-01       | 2014-10-01     |
+B:  | 2          | Milk         | 35    | 20   | 2013-11-01       | 2014-11-01     | 2013-11-01       | 2014-10-01     |
+T:done: 分類商品查詢功能步驟.假設資料庫中有產品資料(<table>) (0.0s)
+B:假設當查詢分類2的商品時
+T:done: 分類商品查詢功能步驟.假設當查詢分類的商品時(2) (0.0s)
+B:當執行分類商品查詢
+T:done: 分類商品查詢功能步驟.當執行分類商品查詢() (0.0s)
+B:那麼得到商品
+B:  --- table step argument ---
+B:  | Name         | Price |
+B:  | Orange Juice | 40    |
+T:done: 分類商品查詢功能步驟.那麼得到商品(<table>) (0.0s)
+Test #5 is finished on thread #0 as Succeeded within 0.52503 seconds
+Appdomain Disposed
+Total: 2
+Succeeded: 2
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 0

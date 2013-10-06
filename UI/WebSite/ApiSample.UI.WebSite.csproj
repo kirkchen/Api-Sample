@@ -261,6 +261,10 @@
       <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
       <Name>ApiSample.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
+      <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>
+      <Name>ApiSample.Utility.Hooks</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
