@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApiSample.Utility.Hooks.ValidFlag;
 
 namespace ApiSample.DA.Repositories
 {
@@ -20,15 +21,17 @@ namespace ApiSample.DA.Repositories
 
         public IEnumerable<ProductForCategoryModel> GetProductByCategoryId(int categoryId)
         {
-            var result = this.ShopContext.Products.Where(i => i.ListingStartTime < DateTime.Now &&
-                                                              i.ListingEndTime >= DateTime.Now &&
-                                                              i.Category.Id == categoryId)
-                                                  .Select(i => new ProductForCategoryModel()
-                                                  {
-                                                      Id = i.Id,
-                                                      Name = i.Name,
-                                                      Price = i.Price
-                                                  });
+            var result = this.ShopContext.Products
+                                         .Valids()
+                                         .Where(i => i.ListingStartTime < DateTime.Now &&
+                                                     i.ListingEndTime >= DateTime.Now &&
+                                                     i.Category.Id == categoryId)
+                                         .Select(i => new ProductForCategoryModel()
+                                         {
+                                             Id = i.Id,
+                                             Name = i.Name,
+                                             Price = i.Price
+                                         });
 
             return result;
         }

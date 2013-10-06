@@ -52,6 +52,9 @@
     <Compile Include="UpdateSystemInfo\ISystemInfo.cs" />
     <Compile Include="UpdateSystemInfo\UpdateSystemInfoPreInsertHook.cs" />
     <Compile Include="UpdateSystemInfo\UpdateSystemInfoPreUpdateHook.cs" />
+    <Compile Include="ValidFlag\IIsValid.cs" />
+    <Compile Include="ValidFlag\IsValidExtensions.cs" />
+    <Compile Include="ValidFlag\ReplaceDeleteByIsValidPreDeleteHook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

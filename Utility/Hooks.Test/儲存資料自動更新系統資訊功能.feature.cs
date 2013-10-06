@@ -68,7 +68,7 @@ namespace ApiSample.Utility.Hooks.Test
 #line 7
  testRunner.Given("目前登入的使用者為Kirk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line 8
- testRunner.And("ShopContext當更新時會自動更新系統資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "並且");
+ testRunner.And("ShopContext更新時會自動更新系統資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "並且");
 #line hidden
         }
         
