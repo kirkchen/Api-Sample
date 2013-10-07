@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="儲存資料自動更新系統資訊功能步驟.cs" />
+    <Compile Include="刪除資料改為更新IsValid欄位功能.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>刪除資料改為更新IsValid欄位功能.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hooks\ApiSample.Utility.Hooks.csproj">
@@ -103,6 +108,10 @@
     <None Include="儲存資料自動更新系統資訊功能.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>儲存資料自動更新系統資訊功能.feature.cs</LastGenOutput>
+    </None>
+    <None Include="刪除資料改為更新IsValid欄位功能.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>刪除資料改為更新IsValid欄位功能.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Choose>

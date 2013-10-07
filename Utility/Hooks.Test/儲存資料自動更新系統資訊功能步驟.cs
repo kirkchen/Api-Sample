@@ -10,6 +10,7 @@ using System.Web;
 using Rhino.Mocks;
 using System.Security.Principal;
 using ApiSample.Utility.Hooks.UpdateSystemInfo;
+using ApiSample.Utility.Hooks.ValidFlag;
 
 namespace ApiSample.Utility.Hooks.Test
 {
@@ -46,15 +47,24 @@ namespace ApiSample.Utility.Hooks.Test
                                           .Return(name);
         }
 
-        [Given(@"ShopContext當更新時會自動更新系統資訊")]
-        public void 假設ShopContext當更新時會自動更新系統資訊()
+        [Given(@"ShopContext更新時會自動更新系統資訊")]
+        public void 假設ShopContext更新時會自動更新系統資訊()
         {
             List<IPreActionHook> hooks = new List<IPreActionHook>();
             hooks.Add(new UpdateSystemInfoPreUpdateHook(this.httpContext));
             hooks.Add(new UpdateSystemInfoPreInsertHook(this.httpContext));
 
             this.shopContext = new ShopContext(hooks);
-        }        
+        }
+
+        [Given(@"ShopContext刪除時會以更新IsValid為false取代")]
+        public void 假設ShopContext刪除時會以更新IsValid為false取代()
+        {
+            List<IPreActionHook> hooks = new List<IPreActionHook>();
+            hooks.Add(new ReplaceDeleteByIsValidPreDeleteHook());
+
+            this.shopContext = new ShopContext(hooks);
+        }
 
         [Given(@"新增分類資料")]
         public void 假設新增分類資料(Table table)
@@ -103,6 +113,16 @@ namespace ApiSample.Utility.Hooks.Test
                                           .Return(name);
         }
 
+        [When(@"執行刪除分類(.*)")]
+        public void 當執行刪除分類(string name)
+        {
+            var category = this.shopContext.Categories.Where(i => i.Name == name)
+                                                      .First();
+
+            this.shopContext.Categories.Remove(category);
+
+            this.shopContext.SaveChanges();
+        }
 
     }
 }
