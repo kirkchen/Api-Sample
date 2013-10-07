@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApiSample.Utility.Hooks.Audit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,6 +17,7 @@ namespace ApiSample.DA.Tables
 
         [StringLength(100)]
         [Required]
+        [RequireAudit]
         public string Name { get; set; }
 
         [ForeignKey("ParentId")]
