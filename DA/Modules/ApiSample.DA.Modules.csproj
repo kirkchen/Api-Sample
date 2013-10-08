@@ -60,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
+      <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>
+      <Name>ApiSample.Utility.Hooks</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interfaces\ApiSample.DA.Interfaces.csproj">
       <Project>{62765fcf-1b3d-49da-8452-2586baa170bc}</Project>
       <Name>ApiSample.DA.Interfaces</Name>

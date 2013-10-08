@@ -1,4 +1,5 @@
-﻿using EFHooks;
+﻿using ApiSample.Utility.Hooks.Audit;
+using EFHooks;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace ApiSample.DA.Tables
 {
-    public class ShopContext : HookedDbContext
+    public class ShopContext : HookedDbContext, IAuditableContext
     {
         /// <summary>
         /// For update-database by package management console
         /// </summary>
-        public ShopContext()       
+        public ShopContext()
         {
         }
 
@@ -21,7 +22,7 @@ namespace ApiSample.DA.Tables
         /// For runtime
         /// </summary>
         /// <param name="hooks"></param>
-        public ShopContext(IEnumerable<IPreActionHook> hooks)            
+        public ShopContext(IEnumerable<IPreActionHook> hooks)
         {
             foreach (var hook in hooks)
             {
@@ -32,5 +33,7 @@ namespace ApiSample.DA.Tables
         public IDbSet<Category> Categories { get; set; }
 
         public IDbSet<Product> Products { get; set; }
+
+        public IDbSet<AuditLog> AuditLogs { get; set; }
     }
 }

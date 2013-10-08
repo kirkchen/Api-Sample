@@ -70,6 +70,10 @@
     <Compile Include="Migrations\201310060708227_AddIsValidField.Designer.cs">
       <DependentUpon>201310060708227_AddIsValidField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310080104449_AddAuditLog.cs" />
+    <Compile Include="Migrations\201310080104449_AddAuditLog.Designer.cs">
+      <DependentUpon>201310080104449_AddAuditLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310060708227_AddIsValidField.resx">
       <DependentUpon>201310060708227_AddIsValidField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310080104449_AddAuditLog.resx">
+      <DependentUpon>201310080104449_AddAuditLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

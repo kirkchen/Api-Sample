@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Audit\AuditLog.cs" />
+    <Compile Include="Audit\AuditLogPreInsertHook.cs" />
+    <Compile Include="Audit\AuditLogPreUpdateHook.cs" />
+    <Compile Include="Audit\IAuditableContext.cs" />
+    <Compile Include="Audit\IIdentifiable.cs" />
+    <Compile Include="Audit\RequireAuditAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateSystemInfo\ISystemInfo.cs" />
     <Compile Include="UpdateSystemInfo\UpdateSystemInfoPreInsertHook.cs" />
