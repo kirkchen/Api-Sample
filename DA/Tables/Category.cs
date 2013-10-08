@@ -29,9 +29,7 @@ namespace ApiSample.DA.Tables
     public class CategoryMetadata
 	{
         [Key]
-        public int Id { get; set; }
-
-        public int? ParentId { get; set; }
+        public int Id { get; set; }        
 
         [StringLength(100)]
         [Required]
@@ -39,8 +37,6 @@ namespace ApiSample.DA.Tables
         public string Name { get; set; }
 
         [ForeignKey("ParentId")]
-        public ICollection<Category> Categories { get; set; }
-
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Category> Categories { get; set; }        
 	}
 }

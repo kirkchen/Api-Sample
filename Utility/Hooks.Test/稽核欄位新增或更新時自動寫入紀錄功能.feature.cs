@@ -72,10 +72,10 @@ namespace ApiSample.Utility.Hooks.Test
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當新增資料時，自動寫入一筆稽核紀錄，記錄新增值", SourceLine=10)]
-        public virtual void 當新增資料時自動寫入一筆稽核紀錄記錄新增值()
+        [TechTalk.SpecRun.ScenarioAttribute("當新增分類資料時，自動寫入一筆稽核紀錄，記錄新增值", SourceLine=10)]
+        public virtual void 當新增分類資料時自動寫入一筆稽核紀錄記錄新增值()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當新增資料時，自動寫入一筆稽核紀錄，記錄新增值", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當新增分類資料時，自動寫入一筆稽核紀錄，記錄新增值", ((string[])(null)));
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -111,10 +111,10 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當更新資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", SourceLine=21)]
-        public virtual void 當更新資料時自動寫入一筆稽核紀錄記錄舊值與新值()
+        [TechTalk.SpecRun.ScenarioAttribute("當更新分類資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", SourceLine=21)]
+        public virtual void 當更新分類資料時自動寫入一筆稽核紀錄記錄舊值與新值()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當更新資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當更新分類資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", ((string[])(null)));
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -152,6 +152,126 @@ this.FeatureBackground();
                         "Fruit"});
 #line 30
  testRunner.And("稽核紀錄包含資料", ((string)(null)), table6, "並且");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("當新增商品資料時，自動寫入稽核紀錄，記錄新增值", SourceLine=34)]
+        public virtual void 當新增商品資料時自動寫入稽核紀錄記錄新增值()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當新增商品資料時，自動寫入稽核紀錄，記錄新增值", ((string[])(null)));
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Id",
+                        "Name"});
+            table7.AddRow(new string[] {
+                        "1",
+                        "Fruits"});
+#line 36
+ testRunner.Given("新增分類資料", ((string)(null)), table7, "假設");
+#line hidden
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CategoryId",
+                        "Name",
+                        "Price",
+                        "Cost",
+                        "ListingStartTime",
+                        "ListingEndTime",
+                        "SellingStartTime",
+                        "SellingEndTime",
+                        "IsValid"});
+            table8.AddRow(new string[] {
+                        "1",
+                        "Hamburger",
+                        "99",
+                        "50",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "true"});
+            table8.AddRow(new string[] {
+                        "1",
+                        "Sandwitch",
+                        "89",
+                        "40",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "true"});
+#line 39
+ testRunner.And("新增商品資料", ((string)(null)), table8, "並且");
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "IsValid"});
+            table9.AddRow(new string[] {
+                        "Fruits",
+                        "true"});
+#line 43
+ testRunner.Then("資料庫中包含資料", ((string)(null)), table9, "那麼");
+#line hidden
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Price",
+                        "Cost",
+                        "ListingStartTime",
+                        "ListingEndTime",
+                        "SellingStartTime",
+                        "SellingEndTime",
+                        "IsValid"});
+            table10.AddRow(new string[] {
+                        "Hamburger",
+                        "99",
+                        "50",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "true"});
+            table10.AddRow(new string[] {
+                        "Sandwitch",
+                        "89",
+                        "40",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "2013-10-01",
+                        "2014-10-01",
+                        "true"});
+#line 46
+ testRunner.And("資料庫中包含商品資料", ((string)(null)), table10, "並且");
+#line hidden
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                        "IdentifyName",
+                        "OriginValue",
+                        "NewValue"});
+            table11.AddRow(new string[] {
+                        "Category",
+                        "",
+                        "Fruits"});
+            table11.AddRow(new string[] {
+                        "Product",
+                        "",
+                        "99"});
+            table11.AddRow(new string[] {
+                        "Product",
+                        "",
+                        "50"});
+            table11.AddRow(new string[] {
+                        "Product",
+                        "",
+                        "89"});
+            table11.AddRow(new string[] {
+                        "Product",
+                        "",
+                        "40"});
+#line 50
+ testRunner.And("稽核紀錄包含資料", ((string)(null)), table11, "並且");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -91,6 +91,20 @@ namespace ApiSample.Utility.Hooks.Test
             this.shopContext.SaveChanges();
         }
 
+        [Given(@"新增商品資料")]
+        public void 假設新增商品資料(Table table)
+        {
+            var products = table.CreateSet<Product>();
+
+            foreach (var product in products)
+            {
+                this.shopContext.Products.Add(product);
+            }
+
+            this.shopContext.SaveChanges();
+        }        
+
+
         [When(@"新增完畢")]
         public void 當新增完畢()
         {
@@ -103,6 +117,14 @@ namespace ApiSample.Utility.Hooks.Test
             var categories = this.shopContext.Categories.ToList();
 
             table.CompareToSet(categories);
+        }
+
+        [Then(@"資料庫中包含商品資料")]
+        public void 那麼資料庫中包含商品資料(Table table)
+        {
+            var products = this.shopContext.Products.ToList();
+
+            table.CompareToSet(products);
         }
 
         [When(@"更新分類名字為(.*)")]

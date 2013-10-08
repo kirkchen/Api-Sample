@@ -51,7 +51,6 @@
     <Compile Include="Audit\AuditLog.cs" />
     <Compile Include="Audit\AuditLogPreInsertHook.cs" />
     <Compile Include="Audit\AuditLogPreUpdateHook.cs" />
-    <Compile Include="Audit\AuditLogRepository.cs" />
     <Compile Include="Audit\IAuditableContext.cs" />
     <Compile Include="Audit\IIdentifiable.cs" />
     <Compile Include="Audit\RequireAuditAttribute.cs" />
