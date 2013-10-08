@@ -11,6 +11,7 @@ using Rhino.Mocks;
 using System.Security.Principal;
 using ApiSample.Utility.Hooks.UpdateSystemInfo;
 using ApiSample.Utility.Hooks.ValidFlag;
+using ApiSample.Utility.Hooks.Audit;
 
 namespace ApiSample.Utility.Hooks.Test
 {
@@ -66,6 +67,17 @@ namespace ApiSample.Utility.Hooks.Test
             this.shopContext = new ShopContext(hooks);
         }
 
+        [Given(@"ShopContext自動寫入稽核紀錄")]
+        public void 假設ShopContext自動寫入稽核紀錄()
+        {
+            List<IPreActionHook> hooks = new List<IPreActionHook>();
+            hooks.Add(new AuditLogPreInsertHook(this.httpContext));
+            hooks.Add(new AuditLogPreUpdateHook(this.httpContext));
+
+            this.shopContext = new ShopContext(hooks);
+        }
+
+
         [Given(@"新增分類資料")]
         public void 假設新增分類資料(Table table)
         {
@@ -79,6 +91,20 @@ namespace ApiSample.Utility.Hooks.Test
             this.shopContext.SaveChanges();
         }
 
+        [Given(@"新增商品資料")]
+        public void 假設新增商品資料(Table table)
+        {
+            var products = table.CreateSet<Product>();
+
+            foreach (var product in products)
+            {
+                this.shopContext.Products.Add(product);
+            }
+
+            this.shopContext.SaveChanges();
+        }        
+
+
         [When(@"新增完畢")]
         public void 當新增完畢()
         {
@@ -91,6 +117,14 @@ namespace ApiSample.Utility.Hooks.Test
             var categories = this.shopContext.Categories.ToList();
 
             table.CompareToSet(categories);
+        }
+
+        [Then(@"資料庫中包含商品資料")]
+        public void 那麼資料庫中包含商品資料(Table table)
+        {
+            var products = this.shopContext.Products.ToList();
+
+            table.CompareToSet(products);
         }
 
         [When(@"更新分類名字為(.*)")]
@@ -122,6 +156,14 @@ namespace ApiSample.Utility.Hooks.Test
             this.shopContext.Categories.Remove(category);
 
             this.shopContext.SaveChanges();
+        }
+
+        [Then(@"稽核紀錄包含資料")]
+        public void 那麼稽核紀錄包含資料(Table table)
+        {
+            var auditLogs = this.shopContext.AuditLogs.ToList();
+
+            table.CompareToSet(auditLogs);
         }
 
     }
