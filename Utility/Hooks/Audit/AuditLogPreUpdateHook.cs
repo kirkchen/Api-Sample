@@ -37,7 +37,7 @@ namespace ApiSample.Utility.Hooks.Audit
             {
                 userName = this.HttpContext.User.Identity.Name;
             }
-
+            
             //// Get entry, entity type and associate etadata
             var entry = ((IObjectContextAdapter)metadata.CurrentContext).ObjectContext.ObjectStateManager.GetObjectStateEntry(entity);
             var entityType = entity.GetType();

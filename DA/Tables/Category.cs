@@ -7,9 +7,27 @@ using System.Linq;
 using System.Text;
 
 namespace ApiSample.DA.Tables
-{
-    public class Category : EntityBase
+{    
+    public partial class Category : EntityBase
+    {        
+        public int Id { get; set; }
+
+        public int? ParentId { get; set; }
+     
+        public string Name { get; set; }
+        
+        public ICollection<Category> Categories { get; set; }        
+
+        public ICollection<Product> Products { get; set; }        
+    }
+
+    [MetadataType(typeof(CategoryMetadata))]
+    public partial class Category
     {
+    }
+     
+    public class CategoryMetadata
+	{
         [Key]
         public int Id { get; set; }
 
@@ -21,8 +39,8 @@ namespace ApiSample.DA.Tables
         public string Name { get; set; }
 
         [ForeignKey("ParentId")]
-        public ICollection<Category> Categories { get; set; }        
+        public ICollection<Category> Categories { get; set; }
 
         public ICollection<Product> Products { get; set; }
-    }
+	}
 }
