@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MappingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModule.cs" />
   </ItemGroup>
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\Intefaces\ApiSample.BL.Interfaces.csproj">
       <Project>{a1d949fa-e621-486d-bfb5-adc91426b2f2}</Project>
       <Name>ApiSample.BL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mappings\ApiSample.BL.Mappings.csproj">
+      <Project>{610839f5-4db4-4a18-9d6c-855e1a1ab1c9}</Project>
+      <Name>ApiSample.BL.Mappings</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\ApiSample.BL.Services.csproj">
       <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>

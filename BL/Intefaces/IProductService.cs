@@ -1,4 +1,5 @@
 ﻿using ApiSample.Models;
+using ApiSample.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace ApiSample.BL.Interfaces
     public interface IProductService
     {
         IEnumerable<ProductForCategoryModel> GetProductByCategoryId(int categoryId);
+
+        void InsertProduct(InsertProductModel insertProductModel);
     }
 }

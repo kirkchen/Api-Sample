@@ -1,4 +1,6 @@
 ﻿using ApiSample.BL.Interfaces;
+using ApiSample.Models;
+using ApiSample.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,20 +9,28 @@ using System.Web.Mvc;
 
 namespace ApiSample.UI.WebSite.Controllers
 {
-    public class ProductController : Controller
-    {
-        public IProductService ProductService { get; set; }
-
-        public ProductController(IProductService productService)
+        public class ProductController : Controller
         {
-            this.ProductService = productService;
-        }
+            public IProductService ProductService { get; set; }
 
-        public ActionResult GetProductByCategory(int id)
-        {
-            var result = this.ProductService.GetProductByCategoryId(id);
+            public ProductController(IProductService productService)
+            {
+                this.ProductService = productService;
+            }
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+            public ActionResult GetProductByCategory(int id)
+            {
+                var result = this.ProductService.GetProductByCategoryId(id);
+
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+
+            [HttpPost]
+            public ActionResult Create(InsertProductModel product)
+            {
+                this.ProductService.InsertProduct(product);
+
+                return Json(ApiStatusEnum.Success.ToString());
+            }
         }
-    }
 }

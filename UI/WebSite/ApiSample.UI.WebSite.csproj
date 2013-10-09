@@ -48,6 +48,12 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -132,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -241,6 +248,10 @@
       <Project>{a1d949fa-e621-486d-bfb5-adc91426b2f2}</Project>
       <Name>ApiSample.BL.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\BL\Mappings\ApiSample.BL.Mappings.csproj">
+      <Project>{610839f5-4db4-4a18-9d6c-855e1a1ab1c9}</Project>
+      <Name>ApiSample.BL.Mappings</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\BL\Modules\ApiSample.BL.Modules.csproj">
       <Project>{c14278c6-0830-4f56-bc7e-4b483daf8024}</Project>
       <Name>ApiSample.BL.Modules</Name>
@@ -248,6 +259,10 @@
     <ProjectReference Include="..\..\BL\Services\ApiSample.BL.Services.csproj">
       <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
       <Name>ApiSample.BL.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DA\Mappings\ApiSample.DA.Mappings.csproj">
+      <Project>{faf5de27-fec5-4504-ae67-6c973bae2c12}</Project>
+      <Name>ApiSample.DA.Mappings</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\DA\Modules\ApiSample.DA.Modules.csproj">
       <Project>{0278372b-9e81-47a4-b1d8-a58797fb32a0}</Project>
@@ -260,6 +275,10 @@
     <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
       <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
       <Name>ApiSample.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\ViewModels\ApiSample.ViewModels.csproj">
+      <Project>{10b4f916-deb7-4551-a83c-d1ad245e8b90}</Project>
+      <Name>ApiSample.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
       <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>

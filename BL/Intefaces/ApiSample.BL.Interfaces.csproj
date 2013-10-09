@@ -48,6 +48,10 @@
       <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
       <Name>ApiSample.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\ViewModels\ApiSample.ViewModels.csproj">
+      <Project>{10b4f916-deb7-4551-a83c-d1ad245e8b90}</Project>
+      <Name>ApiSample.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,8 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.DA.Interfaces;
 using ApiSample.Models;
+using ApiSample.ViewModels;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,13 @@ namespace ApiSample.BL.Services
         public IEnumerable<ProductForCategoryModel> GetProductByCategoryId(int categoryId)
         {
             return this.ProductRepository.GetProductByCategoryId(categoryId);
+        }
+
+        public void InsertProduct(InsertProductModel insertProductModel)
+        {
+            var productModel = Mapper.Map<ProductModel>(insertProductModel);                       
+
+            this.ProductRepository.InsertProduct(productModel);
         }
     }
 }

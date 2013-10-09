@@ -15,7 +15,9 @@ namespace ApiSample.DA.Tables
         public EntityBase()
         {
             this.CreatedAt = DateTime.Now;
+            this.CreatedBy = "Unlogin";
             this.UpdatedAt = DateTime.Now;
+            this.UpdatedBy = "Unlogin";
             this.IsValid = true;
             this.IdentifyKey = Guid.NewGuid();
         }
