@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0278372B-9E81-47A4-B1D8-A58797FB32A0}</ProjectGuid>
+    <ProjectGuid>{FAF5DE27-FEC5-4504-AE67-6C973BAE2C12}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApiSample.DA.Modules</RootNamespace>
-    <AssemblyName>ApiSample.DA.Modules</AssemblyName>
+    <RootNamespace>ApiSample.DA.Mappings</RootNamespace>
+    <AssemblyName>ApiSample.DA.Mappings</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,25 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\..\packages\Autofac.3.1.1\lib\net40\Autofac.dll</HintPath>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.Mvc">
-      <HintPath>..\..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="EFHooks, Version=1.0.5.4, Culture=neutral, PublicKeyToken=1386ae34114c35cf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Atreyu.EFHooks.1.0.5.4\lib\net45\EFHooks.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,28 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HookModule.cs" />
-    <Compile Include="MappingModule.cs" />
+    <Compile Include="GiftMappingProfile.cs" />
+    <Compile Include="ProductMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryModule.cs" />
-    <Compile Include="TableModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Model\Models\ApiSample.Models.csproj">
+      <Project>{e004c6a4-bb22-4feb-a5aa-d246b870ec6c}</Project>
+      <Name>ApiSample.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
       <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>
       <Name>ApiSample.Utility.Hooks</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Interfaces\ApiSample.DA.Interfaces.csproj">
-      <Project>{62765fcf-1b3d-49da-8452-2586baa170bc}</Project>
-      <Name>ApiSample.DA.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Repositories\ApiSample.DA.Repositories.csproj">
-      <Project>{c471e2db-a4ec-48dd-8f8e-5cadbe8b573d}</Project>
-      <Name>ApiSample.DA.Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\Tables\ApiSample.DA.Tables.csproj">
       <Project>{1fa1d04c-e072-40aa-8854-3e437f88fdbf}</Project>

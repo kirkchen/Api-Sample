@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApiSample.Utility.Hooks.ValidFlag;
+using AutoMapper;
 
 namespace ApiSample.DA.Repositories
 {
@@ -38,26 +39,29 @@ namespace ApiSample.DA.Repositories
 
         public void InsertProduct(ProductModel productModel)
         {
-            var prodcut = new Product();
-            prodcut.Name = productModel.Name;
-            prodcut.Price = productModel.Price;
-            prodcut.Cost = productModel.Cost;
-            prodcut.Description = productModel.Description;
-            prodcut.ListingStartTime = productModel.ListingStartTime;
-            prodcut.ListingEndTime = productModel.ListingEndTime;
-            prodcut.SellingStartTime = productModel.SellingStartTime;
-            prodcut.SellingEndTime = productModel.SellingEndTime;
-            prodcut.CategoryId = productModel.CategoryId;
+            var prodcut = Mapper.Map<Product>(productModel);
+            prodcut.Gifts = Mapper.Map<List<Gift>>(productModel.Gifts);
 
-            prodcut.Gifts = new List<Gift>();
-            foreach (var giftModel in productModel.Gifts)
-            {
-                var gift = new Gift();
-                gift.Name = giftModel.Name;
-                gift.Description = giftModel.Description;
+            //var prodcut = new Product();
+            //prodcut.Name = productModel.Name;
+            //prodcut.Price = productModel.Price;
+            //prodcut.Cost = productModel.Cost;
+            //prodcut.Description = productModel.Description;
+            //prodcut.ListingStartTime = productModel.ListingStartTime;
+            //prodcut.ListingEndTime = productModel.ListingEndTime;
+            //prodcut.SellingStartTime = productModel.SellingStartTime;
+            //prodcut.SellingEndTime = productModel.SellingEndTime;
+            //prodcut.CategoryId = productModel.CategoryId;
 
-                prodcut.Gifts.Add(gift);
-            }
+            //prodcut.Gifts = new List<Gift>();
+            //foreach (var giftModel in productModel.Gifts)
+            //{
+            //    var gift = new Gift();
+            //    gift.Name = giftModel.Name;
+            //    gift.Description = giftModel.Description;
+
+            //    prodcut.Gifts.Add(gift);
+            //}
 
             this.ShopContext.Products.Add(prodcut);
             this.ShopContext.SaveChanges();

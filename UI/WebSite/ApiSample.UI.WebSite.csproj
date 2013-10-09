@@ -260,6 +260,10 @@
       <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
       <Name>ApiSample.BL.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\DA\Mappings\ApiSample.DA.Mappings.csproj">
+      <Project>{faf5de27-fec5-4504-ae67-6c973bae2c12}</Project>
+      <Name>ApiSample.DA.Mappings</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DA\Modules\ApiSample.DA.Modules.csproj">
       <Project>{0278372b-9e81-47a4-b1d8-a58797fb32a0}</Project>
       <Name>ApiSample.DA.Modules</Name>
