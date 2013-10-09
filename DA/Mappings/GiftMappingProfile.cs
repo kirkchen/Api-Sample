@@ -9,21 +9,21 @@ using System.Threading.Tasks;
 
 namespace ApiSample.DA.Mappings
 {
-    public class GiftMappingProfile : Profile
-    {
-        public override string ProfileName
+        public class GiftMappingProfile : Profile
         {
-            get
+            public override string ProfileName
             {
-                return "GiftMappingProfile";
+                get
+                {
+                    return "GiftMappingProfile";
+                }
+            }
+
+            protected override void Configure()
+            {
+                Mapper.CreateMap<GiftModel, Gift>()
+                      .ForMember(i => i.Name, s => s.MapFrom(i => i.Name))
+                      .ForMember(i => i.Description, s => s.MapFrom(i => i.Description));
             }
         }
-
-        protected override void Configure()
-        {
-            Mapper.CreateMap<GiftModel, Gift>()
-                  .ForMember(i => i.Name, s => s.MapFrom(i => i.Name))
-                  .ForMember(i => i.Description, s => s.MapFrom(i => i.Description));
-        }
-    }
 }

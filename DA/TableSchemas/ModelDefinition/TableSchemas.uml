@@ -25,6 +25,73 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1e9ccbca-c05f-44d7-8c7f-82ae9947630d"
+            isDerived="false"
+            sourceEndRoleName="Product"
+            targetEndRoleName="Gift"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="776929f4-f5ef-4429-8d1a-ea919accc295"
+              LastKnownName="Gift"
+              LastKnownLocation="TableSchemas.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a902721f-ee4e-4ea4-879c-8c9d529a8a85"
+                  name="Product"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1e935b33-cdf3-42d5-8e1e-7a58ccbc822d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2059ae38-88c3-41a4-99cd-be8fb5b0a0b0"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dc558ba6-2da6-4bbf-a577-4c5fea2a3449"
+                  name="Gift"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="81d66eca-a6aa-42d3-a5d7-403aa0901f2f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fdb9ae3d-2865-4993-b1c9-1dbd8a56091f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="9195e32f-be3d-46f2-8a81-e01a42837000"
@@ -95,6 +162,28 @@
           <property
             Id="d39f39c9-018e-4a5c-894a-1c331dd22d25"
             name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="15bd9b74-3b27-4500-be3d-2ee2bbdc9fe4"
+            name="ListingStartTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4d1c9bab-fd49-46fb-a21a-755b9a5392e1"
+            name="ListingEndTime"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -245,6 +334,39 @@
           <property
             Id="c88132a4-559a-43c1-9e12-f0f7f6ae7d46"
             name="ParentId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="776929f4-f5ef-4429-8d1a-ea919accc295"
+        name="Gift"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="06de13c5-2ac5-4b5d-bf65-969367e58583"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1ba663be-8302-444a-8e12-f9f9634c1a79"
+            name="Description"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

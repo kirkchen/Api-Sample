@@ -30,8 +30,9 @@ namespace ApiSample.DA.Mappings
                   .ForMember(i => i.ListingEndTime, s => s.MapFrom(i => i.ListingEndTime))
                   .ForMember(i => i.SellingStartTime, s => s.MapFrom(i => i.SellingStartTime))
                   .ForMember(i => i.SellingEndTime, s => s.MapFrom(i => i.ListingEndTime))
-                  .ForMember(i => i.CategoryId, s => s.MapFrom(i => i.CategoryId));
-                   
+                  .ForMember(i => i.CategoryId, s => s.MapFrom(i => i.CategoryId))
+                  .ForMember(i => i.Gifts, s => s.MapFrom(i => i.Gifts));
+
         }
     }
 }

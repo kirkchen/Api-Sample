@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GiftModelMappingProfile.cs" />
     <Compile Include="ProductModelMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

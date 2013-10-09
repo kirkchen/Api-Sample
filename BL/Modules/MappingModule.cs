@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace ApiSample.BL.Modules
 {
-    public class MappingModule : Autofac.Module
-    {
-        protected override void Load(ContainerBuilder builder)
-        {            
-            var mappings = Assembly.Load("ApiSample.BL.Mappings");
+        public class MappingModule : Autofac.Module
+        {
+            protected override void Load(ContainerBuilder builder)
+            {            
+                var mappings = Assembly.Load("ApiSample.BL.Mappings");
 
-            builder.RegisterAssemblyTypes(mappings)
-                   .Where(i => i.Name.EndsWith("MappingProfile"))
-                   .As(i => i.BaseType);
+                builder.RegisterAssemblyTypes(mappings)
+                       .Where(i => i.Name.EndsWith("MappingProfile"))
+                       .As(i => i.BaseType);
+            }
         }
-    }
 }
