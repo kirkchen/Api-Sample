@@ -12,17 +12,18 @@ namespace ApiSample.UI.WebSite
     // 注意: 如需啟用 IIS6 或 IIS7 傳統模式的說明，
     // 請造訪 http://go.microsoft.com/?LinkId=9394801
 
-    public class MvcApplication : System.Web.HttpApplication
-    {
-        protected void Application_Start()
+        public class MvcApplication : System.Web.HttpApplication
         {
-            AreaRegistration.RegisterAllAreas();
+            protected void Application_Start()
+            {
+                AreaRegistration.RegisterAllAreas();
 
-            AutofacConfig.Initialize();
-            WebApiConfig.Register(GlobalConfiguration.Configuration);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+                AutofacConfig.Initialize();
+                AutoMapperConfig.Initialize();
+                WebApiConfig.Register(GlobalConfiguration.Configuration);
+                FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+                RouteConfig.RegisterRoutes(RouteTable.Routes);
+                BundleConfig.RegisterBundles(BundleTable.Bundles);
+            }
         }
-    }
 }

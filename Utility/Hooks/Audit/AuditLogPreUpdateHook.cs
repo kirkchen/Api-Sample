@@ -49,8 +49,8 @@ namespace ApiSample.Utility.Hooks.Audit
             {
                 //// Check is property need io
                 var propertyDescriptor = properties.Find(propertyName, true);
-                var propRequireIO = propertyDescriptor.Attributes.OfType<RequireAuditAttribute>().FirstOrDefault();
-                if (propRequireIO == null)
+                var propRequireAudit = propertyDescriptor.Attributes.OfType<RequireAuditAttribute>().FirstOrDefault();
+                if (propRequireAudit == null)
                 {
                     continue;
                 }

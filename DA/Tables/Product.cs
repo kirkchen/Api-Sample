@@ -38,5 +38,7 @@ namespace ApiSample.DA.Tables
 
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
+
+        public ICollection<Gift> Gifts { get; set; }
     }
 }

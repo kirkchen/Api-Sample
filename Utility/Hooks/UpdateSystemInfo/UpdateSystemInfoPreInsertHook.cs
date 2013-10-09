@@ -20,7 +20,8 @@ namespace ApiSample.Utility.Hooks.UpdateSystemInfo
         public override void Hook(ISystemInfo entity, HookEntityMetadata metadata)
         {
             var userName = "Unlogin";
-            if (this.HttpContext != null)
+            if (this.HttpContext != null && 
+                this.HttpContext.User.Identity.IsAuthenticated)
             {
                 userName = this.HttpContext.User.Identity.Name;
             }

@@ -16,7 +16,7 @@ namespace ApiSample.BL.Modules
         {
             var service = Assembly.Load("ApiSample.BL.Services");
 
-            builder.RegisterAssemblyTypes(service).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(service).AsImplementedInterfaces();           
         }
     }
 }

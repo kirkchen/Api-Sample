@@ -4,6 +4,44 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="4c432a40-2e3f-42ad-80c6-4406d492085d" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="e966f1e4-a04d-4864-90c8-46573ea7d89f" />
+        <targetEnds>
+          <association Id="792110ce-5eee-47ae-bd47-2c95516e9bc8" isDerived="false" sourceEndRoleName="Product" targetEndRoleName="Gift" isLeaf="false" isAbstract="false">
+            <classMoniker Id="eb5a8724-e904-4cb5-adfd-7e9a929add0a" LastKnownName="Gift" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="34bb1c51-6806-49bf-9931-40f91306aadb" name="Product" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="750b5f20-37aa-4338-9f24-015778dc0334" name="Lower" value="*">
+                      <elementDefinition Id="1e935b33-cdf3-42d5-8e1e-7a58ccbc822d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a87e6b69-2bac-460d-83ba-348c939482d0" name="Upper" value="*">
+                      <elementDefinition Id="2059ae38-88c3-41a4-99cd-be8fb5b0a0b0" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a902721f-ee4e-4ea4-879c-8c9d529a8a85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c13abab-9b98-4adf-8241-93d739c81e96" name="Gift" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="dcc3b653-0169-4def-9c0a-328949451656" name="Lower" value="*">
+                      <elementDefinition Id="81d66eca-a6aa-42d3-a5d7-403aa0901f2f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="969c4daf-0713-42e8-ad2e-e1464c1565bd" name="Upper" value="*">
+                      <elementDefinition Id="fdb9ae3d-2865-4993-b1c9-1dbd8a56091f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="dc558ba6-2da6-4bbf-a577-4c5fea2a3449" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1e9ccbca-c05f-44d7-8c7f-82ae9947630d" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="2ee4719c-bfe1-434b-820b-d2afbeda4a3c" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9195e32f-be3d-46f2-8a81-e01a42837000" />
@@ -25,6 +63,12 @@
           </property>
           <property Id="b4218247-0080-4447-b53b-b82a5c6a1a08" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d39f39c9-018e-4a5c-894a-1c331dd22d25" />
+          </property>
+          <property Id="1bfd8856-172f-4c28-937c-8a3f55979700" name="ListingStartTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="15bd9b74-3b27-4500-be3d-2ee2bbdc9fe4" />
+          </property>
+          <property Id="0fd72085-d8c8-440b-8069-6b0e31cf0b57" name="ListingEndTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d1c9bab-fd49-46fb-a21a-755b9a5392e1" />
           </property>
         </ownedAttributesInternal>
       </class>
@@ -95,6 +139,19 @@
           </property>
           <property Id="8731c57a-7c76-4d67-bf76-21de0b03183e" name="ParentId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c88132a4-559a-43c1-9e12-f0f7f6ae7d46" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="eb5a8724-e904-4cb5-adfd-7e9a929add0a" name="Gift" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="776929f4-f5ef-4429-8d1a-ea919accc295" />
+        <ownedAttributesInternal>
+          <property Id="88156cc4-e54d-4052-afe3-05455c463ae9" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06de13c5-2ac5-4b5d-bf65-969367e58583" />
+          </property>
+          <property Id="b0b63c42-b2dc-465f-8514-9e08f183b29b" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1ba663be-8302-444a-8e12-f9f9634c1a79" />
           </property>
         </ownedAttributesInternal>
       </class>

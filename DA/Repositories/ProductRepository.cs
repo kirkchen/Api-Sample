@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApiSample.Utility.Hooks.ValidFlag;
+using AutoMapper;
 
 namespace ApiSample.DA.Repositories
 {
@@ -34,6 +35,14 @@ namespace ApiSample.DA.Repositories
                                          });
 
             return result;
+        }
+
+        public void InsertProduct(ProductModel productModel)
+        {
+            var prodcut = Mapper.Map<Product>(productModel);                   
+
+            this.ShopContext.Products.Add(prodcut);
+            this.ShopContext.SaveChanges();
         }
     }
 }
