@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GiftModel.cs" />
+    <Compile Include="ProductModel.cs" />
     <Compile Include="ProductForCategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleModel.cs" />

@@ -1,4 +1,6 @@
 ﻿using ApiSample.BL.Interfaces;
+using ApiSample.Models;
+using ApiSample.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,14 @@ namespace ApiSample.UI.WebSite.Controllers
             var result = this.ProductService.GetProductByCategoryId(id);
 
             return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult Create(InsertProductModel product)
+        {
+            this.ProductService.InsertProduct(product);
+
+            return Json(ApiStatusEnum.Success.ToString());
         }
     }
 }

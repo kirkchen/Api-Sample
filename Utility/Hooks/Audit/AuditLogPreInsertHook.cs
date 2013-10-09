@@ -44,8 +44,8 @@ namespace ApiSample.Utility.Hooks.Audit
             foreach (PropertyDescriptor propertyDescriptor in properties)
             {
                 //// If contains requireAudit attribute, add audit log
-                var propRequireIO = propertyDescriptor.Attributes.OfType<RequireAuditAttribute>().FirstOrDefault();
-                if (propRequireIO == null)
+                var propRequireAudit = propertyDescriptor.Attributes.OfType<RequireAuditAttribute>().FirstOrDefault();
+                if (propRequireAudit == null)
                 {
                     continue;
                 }

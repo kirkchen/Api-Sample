@@ -34,6 +34,8 @@ namespace ApiSample.DA.Tables
 
         public IDbSet<Product> Products { get; set; }
 
+        public IDbSet<Gift> Gifts { get; set; }
+
         public IDbSet<AuditLog> AuditLogs { get; set; }
     }
 }
