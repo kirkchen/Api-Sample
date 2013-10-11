@@ -54,6 +54,12 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\packages\FluentValidation.4.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\..\packages\FluentValidation.MVC4.4.0.0.1\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -141,6 +147,7 @@
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FluentValidationConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -260,6 +267,10 @@
       <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
       <Name>ApiSample.BL.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\BL\Validators\ApiSample.BL.Validators.csproj">
+      <Project>{48925022-30d2-429c-83b8-cd7c7fe73db2}</Project>
+      <Name>ApiSample.BL.Validators</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DA\Mappings\ApiSample.DA.Mappings.csproj">
       <Project>{faf5de27-fec5-4504-ae67-6c973bae2c12}</Project>
       <Name>ApiSample.DA.Mappings</Name>
@@ -279,6 +290,10 @@
     <ProjectReference Include="..\..\Model\ViewModels\ApiSample.ViewModels.csproj">
       <Project>{10b4f916-deb7-4551-a83c-d1ad245e8b90}</Project>
       <Name>ApiSample.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Extensions\ApiSample.Utility.Extensions.csproj">
+      <Project>{037b0fcc-d850-4c34-a0d9-c57749ebb2d0}</Project>
+      <Name>ApiSample.Utility.Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Utility\Hooks\ApiSample.Utility.Hooks.csproj">
       <Project>{ed516d43-c767-4e36-aa1f-ad0fa9a05350}</Project>
