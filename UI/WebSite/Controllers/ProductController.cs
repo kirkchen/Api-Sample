@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace ApiSample.UI.WebSite.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : JsonNetController
     {
         public IProductService ProductService { get; set; }
 

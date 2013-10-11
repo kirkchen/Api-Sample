@@ -12,5 +12,9 @@ namespace ApiSample.Models
         public string Name { get; set; }
 
         public decimal Price { get; set; }
+
+        public DateTime StartListingAt { get; set; }
+
+        public DateTime FinishListingAt { get; set; }
     }
 }

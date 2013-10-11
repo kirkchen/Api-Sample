@@ -31,7 +31,9 @@ namespace ApiSample.DA.Repositories
                                          {
                                              Id = i.Id,
                                              Name = i.Name,
-                                             Price = i.Price
+                                             Price = i.Price,
+                                             StartListingAt = i.ListingStartTime,
+                                             FinishListingAt = i.ListingEndTime
                                          });
 
             return result;
