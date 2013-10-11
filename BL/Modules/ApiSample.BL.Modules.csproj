@@ -33,6 +33,9 @@
     <Reference Include="Autofac">
       <HintPath>..\..\packages\Autofac.3.1.1\lib\net40\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\packages\FluentValidation.4.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,11 +48,16 @@
     <Compile Include="MappingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModule.cs" />
+    <Compile Include="ValidatorModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Model\ViewModels\ApiSample.ViewModels.csproj">
+      <Project>{10b4f916-deb7-4551-a83c-d1ad245e8b90}</Project>
+      <Name>ApiSample.ViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Intefaces\ApiSample.BL.Interfaces.csproj">
       <Project>{a1d949fa-e621-486d-bfb5-adc91426b2f2}</Project>
       <Name>ApiSample.BL.Interfaces</Name>
@@ -61,6 +69,10 @@
     <ProjectReference Include="..\Services\ApiSample.BL.Services.csproj">
       <Project>{88ac2472-843c-47b6-940a-b8bb2cd0923f}</Project>
       <Name>ApiSample.BL.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validators\ApiSample.BL.Validators.csproj">
+      <Project>{48925022-30d2-429c-83b8-cd7c7fe73db2}</Project>
+      <Name>ApiSample.BL.Validators</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

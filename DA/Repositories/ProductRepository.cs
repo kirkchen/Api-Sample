@@ -38,7 +38,7 @@ namespace ApiSample.DA.Repositories
         }
 
         public void InsertProduct(ProductModel productModel)
-        {
+        {            
             var prodcut = Mapper.Map<Product>(productModel);                   
 
             this.ShopContext.Products.Add(prodcut);
