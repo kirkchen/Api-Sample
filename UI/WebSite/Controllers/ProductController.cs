@@ -1,5 +1,6 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.Models;
+using ApiSample.Utility.Extensions;
 using ApiSample.ViewModels;
 using FluentValidation.Mvc;
 using System;
@@ -27,22 +28,12 @@ namespace ApiSample.UI.WebSite.Controllers
         }
 
         [HttpPost]
+        [ValidateRequestEntity]
         public ActionResult Create(InsertProductModel product)
         {
-            if (this.ModelState.IsValid)
-            {
-                this.ProductService.InsertProduct(product);
+            this.ProductService.InsertProduct(product);
 
-                return Json(ApiStatusEnum.Success.ToString());
-            }
-            else
-            {
-                string messages = string.Join("; ", this.ModelState.Values
-                                                        .SelectMany(x => x.Errors)
-                                                        .Select(x => x.ErrorMessage));
-
-                return Json(messages);
-            }
+            return Json(ApiStatusEnum.Success.ToString());
         }
     }
 }
