@@ -22,7 +22,8 @@ namespace ApiSample.DA.Mappings
         protected override void Configure()
         {
             Mapper.CreateMap<User, UserModel>()
-                  .ForMember(i => i.Groups, s => s.MapFrom(i => i.Groups.Select(j => j.Name)));
+                  .ForMember(i => i.Groups, 
+                             s => s.MapFrom(i => i.Groups.Select(j => j.Name)));
         }
     }
 }

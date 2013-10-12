@@ -156,6 +156,82 @@
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aa27ea85-6277-4440-a90f-4826e8afae19" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c101d3cc-af21-42d3-ab7c-0fbd77cf64aa" />
+        <targetEnds>
+          <association Id="41a9dc43-0ef3-43fe-a70a-eb4da8e340cf" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Group" isLeaf="false" isAbstract="false">
+            <classMoniker Id="49f88574-5779-40f0-9201-ea5edf81332b" LastKnownName="Group" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44929957-73fc-4887-8957-5ac7e4d00fdb" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="58357cc7-96ca-4a0c-b9f1-9abb5a325802" name="Lower" value="*">
+                      <elementDefinition Id="f7f2fbf9-058b-4d15-ae8c-ff547c9e0e56" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="baf6a8b6-ba23-4f48-ba68-e80a37b7e657" name="Upper" value="*">
+                      <elementDefinition Id="20c957ba-2c93-46c8-9b8e-81bb3b156b96" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5dc19f9f-f2b1-4a9c-92cb-2126b54882e8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7d176a6-5e9f-4814-b88a-19965314e725" name="Group" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="6aec3050-6c4c-4793-bba3-6c0a5ba8bc3d" name="Lower" value="*">
+                      <elementDefinition Id="d2afebd5-6888-4493-b262-566cb39da34f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c431c4aa-b041-4df3-a7f8-58ba003b3217" name="Upper" value="*">
+                      <elementDefinition Id="77f93eba-f8f3-4ffe-a676-e47732a95582" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="3cd81e6f-471f-48ff-8a7f-f5ef405c3e08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7eb49db6-40bf-4983-b9ba-35c86730f105" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8881716a-c99f-433a-ac88-fda5a0d091fb" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ed846838-090b-4d3f-b38c-98560dad6270" />
+          </property>
+          <property Id="082c9dad-c943-4b7d-9d59-f24746cd3622" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9d5bee8f-ff53-49bf-84df-677962ceae21" />
+          </property>
+          <property Id="148f4029-47c4-4c3a-9ae3-55c261e7f8ba" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="728f682b-3b74-4b2d-bcfa-cd59b99abe42" />
+          </property>
+          <property Id="db76c035-69b5-4868-ab51-e3cd3c080bce" name="Token" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25c32fcc-95fb-4f46-9303-137f03d651ac" />
+          </property>
+          <property Id="88d1c770-ef86-4c05-a1aa-d921e63b3421" name="EncryptKey" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25a5ad56-caee-478d-a0de-9a51d5330d64" />
+          </property>
+          <property Id="d4dabce1-64c8-4f93-a86f-0ac8ed9f8728" name="SaltKey" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="128afcc9-d7e6-4587-806a-69818f6c2080" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="49f88574-5779-40f0-9201-ea5edf81332b" name="Group" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8ba3e09e-84a5-4548-a4cd-e5430047b363" />
+        <ownedAttributesInternal>
+          <property Id="c28a84fc-3da7-4e54-8fdb-74e7e1a72c18" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4f1be653-8276-435a-937c-89a73a2da83e" />
+          </property>
+          <property Id="2da1f346-b8cf-45ef-9a5a-56936c4f1203" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f0cf9e48-7912-4e05-b135-791d2127412d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="b39e8963-8665-48ff-89d8-614c95aa8885" name="TableSchemas">
     <elementDefinition Id="d025c97a-abb2-4b21-a11b-bc92b6790bd5" />
