@@ -1,5 +1,6 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.Models;
+using ApiSample.UI.WebSite.ActionFilters;
 using ApiSample.Utility.Extensions;
 using ApiSample.ViewModels;
 using FluentValidation.Mvc;
@@ -28,6 +29,8 @@ namespace ApiSample.UI.WebSite.Controllers
         }
 
         [HttpPost]
+        //[ValidateTokenAttribute]   
+        [Authorize(Roles="Administrator")]
         [ValidateRequestEntity]
         public ActionResult Create(InsertProductModel product)
         {

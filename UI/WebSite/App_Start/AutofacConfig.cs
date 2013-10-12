@@ -16,15 +16,19 @@ namespace ApiSample.UI.WebSite
             var builder = new ContainerBuilder();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            //builder.RegisterFilterProvider();
+           
+            builder.RegisterType<ApiSample.UI.WebSite.ActionFilters.ValidateTokenAttribute>()
+           .As<ApiSample.UI.WebSite.ActionFilters.ValidateTokenAttribute>();
 
             //// Enable inject web types, ex:HttpContext
             builder.RegisterModule(new AutofacWebTypesModule());
 
             //// Read autofac settings from config
             builder.RegisterModule(new ConfigurationSettingsReader());
-            
+
             var container = builder.Build();
-            
+
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }

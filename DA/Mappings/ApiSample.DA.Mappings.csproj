@@ -48,6 +48,7 @@
     <Compile Include="GiftMappingProfile.cs" />
     <Compile Include="ProductMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMappingProfile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

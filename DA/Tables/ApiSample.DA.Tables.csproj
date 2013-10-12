@@ -51,6 +51,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Gift.cs" />
+    <Compile Include="Group.cs" />
     <Compile Include="Migrations\201310030903356_CreateDatabase.cs" />
     <Compile Include="Migrations\201310030903356_CreateDatabase.Designer.cs">
       <DependentUpon>201310030903356_CreateDatabase.cs</DependentUpon>
@@ -83,10 +84,15 @@
     <Compile Include="Migrations\201310081200085_fixGiftFieldError.Designer.cs">
       <DependentUpon>201310081200085_fixGiftFieldError.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201310111626398_AddUserAndGroup.cs" />
+    <Compile Include="Migrations\201310111626398_AddUserAndGroup.Designer.cs">
+      <DependentUpon>201310111626398_AddUserAndGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopContext.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310081200085_fixGiftFieldError.resx">
       <DependentUpon>201310081200085_fixGiftFieldError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201310111626398_AddUserAndGroup.resx">
+      <DependentUpon>201310111626398_AddUserAndGroup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -37,5 +37,9 @@ namespace ApiSample.DA.Tables
         public IDbSet<Gift> Gifts { get; set; }
 
         public IDbSet<AuditLog> AuditLogs { get; set; }
+
+        public IDbSet<User> Users { get; set; }
+
+        public IDbSet<Group> Groups { get; set; }
     }
 }

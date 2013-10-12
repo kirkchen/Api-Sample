@@ -68,7 +68,25 @@ namespace ApiSample.DA.Tables.Migrations
                         }
                     }
                 }
-            );            
+            );
+
+            context.Groups.AddOrUpdate(
+                i => i.Name,
+                new Group()
+                {
+                    Name = "Administrator",
+                    Users = new List<User>()
+                    {
+                        new User(){
+                            Name = "Kirk",
+                            Email = "kirkchen@test.com",
+                            Token = "123456",
+                            EncryptKey = "1111",
+                            SaltKey = "1111"
+                        }
+                    }
+                }
+            );
 
             //  This method will be called after migrating to the latest version.
 
