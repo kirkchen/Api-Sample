@@ -15,12 +15,12 @@ namespace ApiSample.UI.WebSite.Controllers
     public class ProductController : JsonNetController
     {
         public IProductService ProductService { get; set; }
-
+        
         public ProductController(IProductService productService)
         {
             this.ProductService = productService;
         }
-
+        
         public ActionResult GetProductByCategory(int id)
         {
             var result = this.ProductService.GetProductByCategoryId(id);
@@ -29,8 +29,7 @@ namespace ApiSample.UI.WebSite.Controllers
         }
 
         [HttpPost]
-        //[ValidateTokenAttribute]   
-        [Authorize(Roles="Administrator")]
+        [AuthorizeByToken(Roles = "Administrator")]
         [ValidateRequestEntity]
         public ActionResult Create(InsertProductModel product)
         {

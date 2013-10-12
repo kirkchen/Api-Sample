@@ -7,8 +7,7 @@ namespace ApiSample.UI.WebSite
     public class FilterConfig
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-        {
-            filters.Add(DependencyResolver.Current.GetService<ValidateTokenAttribute>());           
+        {                      
             filters.Add(new HandleErrorAttribute());
         }
     }
