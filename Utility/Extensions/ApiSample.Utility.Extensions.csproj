@@ -52,6 +52,7 @@
     <Compile Include="Authentication\IChiperTextHelper.cs" />
     <Compile Include="Authentication\IEncryptHelper.cs" />
     <Compile Include="Authentication\SHA512EncryptHelper.cs" />
+    <Compile Include="Elmah\IPConstraint.cs" />
     <Compile Include="JsonNet\JsonNetController.cs" />
     <Compile Include="FluentValidation\ModelValidatorFactory.cs" />
     <Compile Include="JsonNet\JsonNetResult.cs" />

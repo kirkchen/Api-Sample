@@ -5,6 +5,8 @@ namespace ApiSample.DA.Tables.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Security.Cryptography;
+    using System.Text;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApiSample.DA.Tables.ShopContext>
     {
@@ -79,7 +81,7 @@ namespace ApiSample.DA.Tables.Migrations
                     {
                         new User(){
                             Name = "Kirk",
-                            Email = "kirkchen@test.com",
+                            Email = "kirkchen@test.com",                            
                             Token = "123456",
                             EncryptKey = "1111",
                             SaltKey = "1111"
@@ -100,6 +102,6 @@ namespace ApiSample.DA.Tables.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-        }
+        }        
     }
 }
