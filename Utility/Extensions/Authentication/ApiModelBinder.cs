@@ -11,12 +11,12 @@ namespace ApiSample.Utility.Extensions.Authentication
     public class ApiModelBinder : DefaultModelBinder
     {
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
-        {          
-            var valueResult = bindingContext.ValueProvider.GetValue("data");            
+        {
+            var valueResult = bindingContext.ValueProvider.GetValue("data");
 
             if (valueResult != null &&
                 !string.IsNullOrWhiteSpace(valueResult.AttemptedValue))
-            {                
+            {
                 try
                 {
                     var data = valueResult.AttemptedValue;
@@ -32,10 +32,10 @@ namespace ApiSample.Utility.Extensions.Authentication
                         ModelState = bindingContext.ModelState,
                         ValueProvider = bindingContext.ValueProvider
                     };
-                    
+
                     return base.BindModel(controllerContext, newBindingContext);
                 }
-                catch 
+                catch
                 {
                     //// Skip json.net deserialize error
                 }
