@@ -1,5 +1,6 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.Models;
+using ApiSample.UI.WebSite.ActionFilters;
 using ApiSample.Utility.Extensions;
 using ApiSample.ViewModels;
 using FluentValidation.Mvc;
@@ -14,12 +15,12 @@ namespace ApiSample.UI.WebSite.Controllers
     public class ProductController : JsonNetController
     {
         public IProductService ProductService { get; set; }
-
+        
         public ProductController(IProductService productService)
         {
             this.ProductService = productService;
         }
-
+        
         public ActionResult GetProductByCategory(int id)
         {
             var result = this.ProductService.GetProductByCategoryId(id);
@@ -28,6 +29,7 @@ namespace ApiSample.UI.WebSite.Controllers
         }
 
         [HttpPost]
+        [AuthorizeByToken(Roles = "Administrator")]
         [ValidateRequestEntity]
         public ActionResult Create(InsertProductModel product)
         {

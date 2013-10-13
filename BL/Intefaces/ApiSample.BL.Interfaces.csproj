@@ -42,6 +42,7 @@
     <Compile Include="ICategoryService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="ISampleService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

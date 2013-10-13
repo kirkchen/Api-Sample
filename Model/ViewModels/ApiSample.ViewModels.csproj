@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiRequestEntity.cs" />
     <Compile Include="ApiResultEntity.cs" />
     <Compile Include="ApiStatusEnum.cs" />
     <Compile Include="InsertProductModel.cs" />
