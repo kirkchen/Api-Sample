@@ -23,6 +23,7 @@ namespace ApiSample.UI.WebSite
             FluentValidationConfig.Initialize();
             ValueProviderConfig.Initialize();
             ExceptionHandlingConfig.Initialize();
+            NLogConfig.Initialize();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
