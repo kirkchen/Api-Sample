@@ -22,6 +22,8 @@ namespace ApiSample.UI.WebSite
             AutoMapperConfig.Initialize();
             FluentValidationConfig.Initialize();
             ValueProviderConfig.Initialize();
+            ExceptionHandlingConfig.Initialize();
+
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

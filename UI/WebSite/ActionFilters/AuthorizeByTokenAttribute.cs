@@ -39,7 +39,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
             //// Override unauthorized behavior
             if (filterContext.Result is HttpUnauthorizedResult)
             {
-                throw new ApplicationException("Unauthorized!");
+                throw new AuthorizeTokenFailureException("Unauthorized!");
             }
         }
 
@@ -58,7 +58,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
 
             if (requestData.Signature != expectSignature)
             {
-                throw new ApplicationException("Signature not valid!");
+                throw new AuthorizeTokenFailureException("Signature not valid!");
             }            
         }
 
@@ -67,7 +67,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
             //// Check is timestamp valid
             if (!this.ChiperTextHelper.CheckTimestampInRange(requestData.TimeStamp, 86400))
             {
-                throw new ApplicationException("Timestamp not valid!");
+                throw new AuthorizeTokenFailureException("Timestamp not valid!");
             }
         }
 
@@ -91,7 +91,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
             }
             else
             {
-                throw new ApplicationException(string.Format("{0} can't not be null!", key));
+                throw new AuthorizeTokenFailureException(string.Format("{0} can't not be null!", key));
             }
         }
     }

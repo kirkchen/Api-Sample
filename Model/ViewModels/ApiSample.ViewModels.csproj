@@ -42,6 +42,7 @@
     <Compile Include="ApiRequestEntity.cs" />
     <Compile Include="ApiResultEntity.cs" />
     <Compile Include="ApiStatusEnum.cs" />
+    <Compile Include="AuthroizeTokenFailureException.cs" />
     <Compile Include="InsertProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
