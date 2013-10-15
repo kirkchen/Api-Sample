@@ -25,7 +25,7 @@ namespace ApiSample.UI.WebSite.Controllers
             this.Logger = logger;
         }
 
-        //[AuthorizeByToken(Roles = "Administrator")]        
+        [AuthorizeByToken(Roles = "Administrator")]        
         public ActionResult GetProductByCategory(int id)
         {
             this.Logger.Debug("Execute GetProductByCategory - {0}", id);

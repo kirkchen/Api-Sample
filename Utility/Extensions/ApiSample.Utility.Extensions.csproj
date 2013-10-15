@@ -76,6 +76,7 @@
     <Compile Include="JsonNet\JsonNetValueProviderFactory.cs" />
     <Compile Include="Nlog\ActionLayoutRenderer.cs" />
     <Compile Include="Nlog\ControllerLayoutRenderer.cs" />
+    <Compile Include="Nlog\DeveloperHackAuth.cs" />
     <Compile Include="Nlog\LogRequestAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidateRequestEntityAttribute.cs" />

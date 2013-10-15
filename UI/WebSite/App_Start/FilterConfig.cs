@@ -13,7 +13,8 @@ namespace ApiSample.UI.WebSite
             filters.Add(new ApiErrorHandleAttribute());
             filters.Add(new ExceptionHandlingAttribute());
             filters.Add(new ApiResultAttribute());
-            filters.Add(DependencyResolver.Current.GetService<LogRequestAttribute>());
+            filters.Add(DependencyResolver.Current.GetService<LogRequestAttribute>());            
+            filters.Add(DependencyResolver.Current.GetService<DeveloperHackAuthAttribute>());
         }
     }
 }
