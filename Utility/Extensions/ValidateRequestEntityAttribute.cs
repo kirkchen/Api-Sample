@@ -17,14 +17,16 @@ namespace ApiSample.Utility.Extensions
             {
                 string errorMessages = string.Join("; ", modelState.Values
                                                               .SelectMany(x => x.Errors)
-                                                              .Select(x => x.ErrorMessage));                
+                                                              .Select(x => x.ErrorMessage));
 
-                filterContext.Result = new JsonResult()
-                {
-                    Data = errorMessages,
-                    ContentEncoding = Encoding.UTF8,
-                    JsonRequestBehavior = JsonRequestBehavior.AllowGet
-                };
+                throw new ValidateEntityFailureException(errorMessages);
+
+                //filterContext.Result = new JsonResult()
+                //{
+                //    Data = errorMessages,
+                //    ContentEncoding = Encoding.UTF8,
+                //    JsonRequestBehavior = JsonRequestBehavior.AllowGet
+                //};
             }
         }
     }

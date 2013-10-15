@@ -156,8 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionFilters\ApiErrorHandleAttribute.cs" />
+    <Compile Include="ActionFilters\ApiResultAttribute.cs" />
     <Compile Include="ActionFilters\AuthorizeByTokenAttribute.cs" />
-    <Compile Include="ActionFilters\ExceptionHandlingAttribute.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />

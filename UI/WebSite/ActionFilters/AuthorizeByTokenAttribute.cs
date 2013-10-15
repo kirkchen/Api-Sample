@@ -28,7 +28,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
 
             //// Check Signature
             var userData = this.UserService.GetUserByToken(requestData.Token);
-            this.CheckIsSignatureValid(requestData,userData);
+            this.CheckIsSignatureValid(requestData, userData);
 
             //// Assign User Identity
             this.AssignUserIdentity(filterContext, userData);
@@ -52,20 +52,20 @@ namespace ApiSample.UI.WebSite.ActionFilters
         }
 
         private void CheckIsSignatureValid(ApiRequestEntity requestData, UserModel userData)
-        {            
+        {
             var expectSignature = this.ChiperTextHelper
                                       .GetSignature(userData.EncryptKey, userData.SaltKey, requestData.TimeStamp, requestData.Data);
 
             if (requestData.Signature != expectSignature)
             {
                 throw new AuthorizeTokenFailureException("Signature not valid!");
-            }            
+            }
         }
 
         private void CheckIsTimeStampValid(ApiRequestEntity requestData)
         {
             //// Check is timestamp valid
-            if (!this.ChiperTextHelper.CheckTimestampInRange(requestData.TimeStamp, 86400))
+            if (!this.ChiperTextHelper.CheckTimestampInRange(requestData.TimeStamp, 86400 * 30))
             {
                 throw new AuthorizeTokenFailureException("Timestamp not valid!");
             }
