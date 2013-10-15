@@ -19,14 +19,7 @@ namespace ApiSample.Utility.Extensions
                                                               .SelectMany(x => x.Errors)
                                                               .Select(x => x.ErrorMessage));
 
-                throw new ValidateEntityFailureException(errorMessages);
-
-                //filterContext.Result = new JsonResult()
-                //{
-                //    Data = errorMessages,
-                //    ContentEncoding = Encoding.UTF8,
-                //    JsonRequestBehavior = JsonRequestBehavior.AllowGet
-                //};
+                throw new ValidateEntityFailureException(errorMessages);                
             }
         }
     }
