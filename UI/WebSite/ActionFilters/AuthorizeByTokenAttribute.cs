@@ -28,7 +28,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
 
             //// Check Signature
             var userData = this.UserService.GetUserByToken(requestData.Token);
-            this.CheckIsSignatureValid(requestData,userData);
+            this.CheckIsSignatureValid(requestData, userData);
 
             //// Assign User Identity
             this.AssignUserIdentity(filterContext, userData);
@@ -39,7 +39,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
             //// Override unauthorized behavior
             if (filterContext.Result is HttpUnauthorizedResult)
             {
-                throw new ApplicationException("Unauthorized!");
+                throw new AuthorizeTokenFailureException("Unauthorized!");
             }
         }
 
@@ -52,22 +52,22 @@ namespace ApiSample.UI.WebSite.ActionFilters
         }
 
         private void CheckIsSignatureValid(ApiRequestEntity requestData, UserModel userData)
-        {            
+        {
             var expectSignature = this.ChiperTextHelper
                                       .GetSignature(userData.EncryptKey, userData.SaltKey, requestData.TimeStamp, requestData.Data);
 
             if (requestData.Signature != expectSignature)
             {
-                throw new ApplicationException("Signature not valid!");
-            }            
+                throw new AuthorizeTokenFailureException("Signature not valid!");
+            }
         }
 
         private void CheckIsTimeStampValid(ApiRequestEntity requestData)
         {
             //// Check is timestamp valid
-            if (!this.ChiperTextHelper.CheckTimestampInRange(requestData.TimeStamp, 86400))
+            if (!this.ChiperTextHelper.CheckTimestampInRange(requestData.TimeStamp, 86400 * 30))
             {
-                throw new ApplicationException("Timestamp not valid!");
+                throw new AuthorizeTokenFailureException("Timestamp not valid!");
             }
         }
 
@@ -91,7 +91,7 @@ namespace ApiSample.UI.WebSite.ActionFilters
             }
             else
             {
-                throw new ApplicationException(string.Format("{0} can't not be null!", key));
+                throw new AuthorizeTokenFailureException(string.Format("{0} can't not be null!", key));
             }
         }
     }

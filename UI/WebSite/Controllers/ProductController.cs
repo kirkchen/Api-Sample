@@ -20,7 +20,8 @@ namespace ApiSample.UI.WebSite.Controllers
         {
             this.ProductService = productService;
         }
-        
+
+        [AuthorizeByToken(Roles = "Administrator")]
         public ActionResult GetProductByCategory(int id)
         {
             var result = this.ProductService.GetProductByCategoryId(id);
@@ -30,7 +31,7 @@ namespace ApiSample.UI.WebSite.Controllers
 
         [HttpPost]
         [AuthorizeByToken(Roles = "Administrator")]
-        [ValidateRequestEntity]
+        [ValidateRequestEntity]        
         public ActionResult Create(InsertProductModel product)
         {
             this.ProductService.InsertProduct(product);

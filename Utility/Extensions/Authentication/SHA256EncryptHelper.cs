@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiSample.Utility.Extensions.Authentication
 {
-    public class SHA512EncryptHelper : IEncryptHelper
+    public class SHA256EncryptHelper : IEncryptHelper
     {
         public string Encrypt(string key, string source)
         {
