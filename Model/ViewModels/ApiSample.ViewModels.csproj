@@ -42,8 +42,10 @@
     <Compile Include="ApiRequestEntity.cs" />
     <Compile Include="ApiResultEntity.cs" />
     <Compile Include="ApiStatusEnum.cs" />
+    <Compile Include="AuthroizeTokenFailureException.cs" />
     <Compile Include="InsertProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidateEntityFailureException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
