@@ -18,6 +18,9 @@ namespace ApiSample.UI.WebSite
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                        "~/Scripts/knockout-{version}.js"));
+
             // 使用開發版本的 Modernizr 進行開發並學習。然後，當您
             // 準備好實際執行時，請使用 http://modernizr.com 上的建置工具，只選擇您需要的測試。
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -38,6 +41,9 @@ namespace ApiSample.UI.WebSite
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/bootstrap/css").Include(
+                        "~/Content/bootstrap/bootstrap.css"));
         }
     }
 }
