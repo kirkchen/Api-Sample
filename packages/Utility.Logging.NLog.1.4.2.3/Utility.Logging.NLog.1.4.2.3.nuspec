@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Utility.Logging.NLog</id>
+    <version>1.4.2.3</version>
+    <title>Utility.Logging.NLog</title>
+    <authors>Chris Hogan</authors>
+    <owners>Chris Hogan</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/ChrisMH/Utility.Logging</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Implementation of Utility.Logging for NLog</description>
+    <releaseNotes />
+    <copyright>Copyright 2011</copyright>
+    <language />
+    <tags>utility logging nlog</tags>
+    <dependencies>
+      <dependency id="NLog" />
+      <dependency id="Utility.Logging" />
+    </dependencies>
+  </metadata>
+</package>

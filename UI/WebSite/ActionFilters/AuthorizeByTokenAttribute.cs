@@ -20,6 +20,12 @@ namespace ApiSample.UI.WebSite.ActionFilters
 
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
+            //// hack for developing            
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {                
+                return;
+            }
+
             //// Get request data
             var requestData = this.GetApiRequestEntity(filterContext);
 
