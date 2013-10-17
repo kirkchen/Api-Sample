@@ -16,6 +16,11 @@ namespace ApiSample.UI.WebSite.Controllers
             this.ChiperTextHelper = chiperTextHelper;
         }
 
+        public ActionResult Helper()
+        {
+            return View();
+        }
+
         public string GetTimeStamp()
         {
             return this.ChiperTextHelper.GetTimeStamp();

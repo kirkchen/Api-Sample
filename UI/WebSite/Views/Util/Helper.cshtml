@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Helper";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1>Api Helper
+    </h1>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="url" class="col-lg-2 control-label">Url</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="url" placeholder="Url" data-bind="value: url">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="token" class="col-lg-2 control-label">Token</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="token" placeholder="Api Token" data-bind="value: token">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="key" class="col-lg-2 control-label">Key</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="key" placeholder="Api Key" data-bind="value: key">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="saltkey" class="col-lg-2 control-label">SaltKey</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="saltkey" placeholder="Api SaltKey" data-bind="value: saltkey">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="data" class="col-lg-2 control-label">Data</label>
+            <div class="col-lg-10">
+                @*<input type="text" class="form-control" id="data" placeholder="Data">*@
+                <textarea class="form-control" rows="10" data-bind="value: data"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="button" class="btn btn-primary" data-bind="click: Query">Query</button>
+            </div>
+        </div>
+    </form>
+    <hr />
+    <div data-bind="html: result">
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/app/utilhelper.js"></script>
+}
