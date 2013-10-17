@@ -2,6 +2,7 @@
 using ApiSample.Models;
 using ApiSample.UI.WebSite.ActionFilters;
 using ApiSample.Utility.Extensions;
+using ApiSample.Utility.Extensions.SchemaValidate;
 using ApiSample.ViewModels;
 using FluentValidation.Mvc;
 using System;
@@ -37,6 +38,7 @@ namespace ApiSample.UI.WebSite.Controllers
 
         [HttpPost]
         [AuthorizeByToken(Roles = "Administrator")]
+        [ValidateJsonSchema]
         [ValidateRequestEntity]
         public ActionResult Create(InsertProductModel product)
         {
