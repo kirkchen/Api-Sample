@@ -7,6 +7,7 @@ using ApiSample.ViewModels;
 using FluentValidation.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +17,8 @@ namespace ApiSample.UI.WebSite.Controllers
 {
     public class ProductController : JsonNetController
     {
+        private TraceSource trace = new TraceSource("Glimpse");
+
         public IProductService ProductService { get; set; }
 
         public ILogger Logger { get; set; }
@@ -26,12 +29,17 @@ namespace ApiSample.UI.WebSite.Controllers
             this.Logger = logger;
         }
 
-        [AuthorizeByToken(Roles = "Administrator")]        
+        [AuthorizeByToken(Roles = "Administrator")]
         public ActionResult GetProductByCategory(int id)
-        {
+        {            
+            trace.TraceEvent(TraceEventType.Start, 0, "GetProductByCategory -{0}", id);
+            trace.TraceEvent(TraceEventType.Warning, 0, "Trying to get product info...");
+
             this.Logger.Debug("Execute GetProductByCategory - {0}", id);
 
             var result = this.ProductService.GetProductByCategoryId(id);
+
+            trace.TraceEvent(TraceEventType.Stop, 0, "GetProductByCategory -{0}", id);
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
@@ -45,6 +53,6 @@ namespace ApiSample.UI.WebSite.Controllers
             this.ProductService.InsertProduct(product);
 
             return Json(ApiStatusEnum.Success.ToString());
-        }        
+        }
     }
 }

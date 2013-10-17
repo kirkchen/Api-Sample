@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Glimpse.Ado</id>
+    <version>1.4.1</version>
+    <title>Glimpse ADO</title>
+    <authors>nmolnar,  avanderhoorn</authors>
+    <owners>nmolnar,  avanderhoorn</owners>
+    <licenseUrl>http://www.opensource.org/licenses/apache2.0</licenseUrl>
+    <projectUrl>http://getglimpse.com/</projectUrl>
+    <iconUrl>http://getglimpse.com/content/glimpse100.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Glimpse is a web debugging and diagnostics tool used to gain a better understanding of whats happening inside of your ASP.NET 3.5+ application. This package adds ADO profiling for those using DbProviderFactory.</description>
+    <summary>Glimpse tabs for ADO.</summary>
+    <releaseNotes>Flyweight release for Ado:
+ - Fix error calling what could occur when binding DataReader's to controls
+ - Made GlimpseDbDataAdapter public to allow it to be accessed in different cases</releaseNotes>
+    <tags>ASP.NET Web WebForms Glimpse ADO ADO.NET SQL performance profiling timing diagnostics</tags>
+    <dependencies>
+      <dependency id="Glimpse" version="1.4.0" />
+    </dependencies>
+  </metadata>
+</package>

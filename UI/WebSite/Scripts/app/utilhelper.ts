@@ -56,13 +56,13 @@ module ApiSample {
         result: KnockoutObservable<string>;
 
         constructor() {
-            //this.url = ko.observable('/Product/GetProductByCategory/3');
-            this.url = ko.observable('/Product/Create');
+            this.url = ko.observable('/Product/GetProductByCategory/3');
+            //this.url = ko.observable('/Product/Create');
             this.key = ko.observable('1111');
             this.saltkey = ko.observable('1111');
             this.token = ko.observable('123456');
-            //this.data = ko.observable('{}');
-            this.data = ko.observable("{'Name':'Test','Price':200,'Cost':200,'Introduction':'Test Description','StartListingAt':'2013 - 10 - 09T10:00:00','FinishListingAt':'2014 - 10 - 09T10:00:00','StartSellAt':'2013 - 10 - 09T10:00:00','FinishSellAt':'2014 - 10 - 09T10:00:00','CategoryId':0,'Gifts':'Gift1:Gift1Desc; Gift2:Gift2Desc'}");
+            this.data = ko.observable('{}');
+            //this.data = ko.observable("{'Name':'Test','Price':200,'Cost':200,'Introduction':'Test Description','StartListingAt':'2013 - 10 - 09T10:00:00','FinishListingAt':'2014 - 10 - 09T10:00:00','StartSellAt':'2013 - 10 - 09T10:00:00','FinishSellAt':'2014 - 10 - 09T10:00:00','CategoryId':0,'Gifts':'Gift1:Gift1Desc; Gift2:Gift2Desc'}");
             this.result = ko.observable();
 
             this.service = new UtilService();
