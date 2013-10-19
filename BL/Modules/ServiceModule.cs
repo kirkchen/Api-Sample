@@ -7,6 +7,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Autofac.Extras.DynamicProxy2;
+using ApiSample.Utility.Extensions.Aop;
 
 namespace ApiSample.BL.Modules
 {
@@ -16,7 +18,14 @@ namespace ApiSample.BL.Modules
         {
             var service = Assembly.Load("ApiSample.BL.Services");
 
-            builder.RegisterAssemblyTypes(service).AsImplementedInterfaces();           
+            builder.RegisterAssemblyTypes(service)
+                   .AsImplementedInterfaces()
+                   .EnableInterfaceInterceptors();
+
+            builder.RegisterType<ProductService>()
+                   .As<IProductService>()
+                   .EnableInterfaceInterceptors()
+                   .InterceptedBy(typeof(LogInterceptor), typeof(AuthInterceptor));
         }
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Autofac.Extras.DynamicProxy2</id>
+    <version>3.0.2</version>
+    <title>Autofac Extras: Castle Dynamic Proxy Support</title>
+    <authors>Autofac Contributors</authors>
+    <owners>Autofac Contributors</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://autofac.org/</projectUrl>
+    <iconUrl>http://code.google.com/p/autofac/logo</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The dynamic proxy integration enables method calls on Autofac components to be intercepted by other components. Common use cases are transaction handling, logging, and declarative security.</description>
+    <summary>Autofac extension for enabling AOP in conjunction with Castle.</summary>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="Autofac" version="3.0.2" />
+      <dependency id="Castle.Core" version="3.2.0" />
+    </dependencies>
+  </metadata>
+</package>

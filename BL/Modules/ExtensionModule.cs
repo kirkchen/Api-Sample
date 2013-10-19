@@ -1,4 +1,6 @@
-﻿using Autofac;
+﻿using ApiSample.Utility.Extensions.Aop;
+using Autofac;
+using Castle.DynamicProxy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,13 @@ namespace ApiSample.BL.Modules
 
             builder.RegisterAssemblyTypes(mappings)
                    .AsImplementedInterfaces();
+
+            builder.RegisterAssemblyTypes(mappings)
+                   .Where(i => i.Name.EndsWith("Interceptor"))
+                   .AsSelf();
+
+            builder.Register(i => new AuthInterceptor("Administrator"))
+                   .As<AuthInterceptor>();
         }
     }
 }

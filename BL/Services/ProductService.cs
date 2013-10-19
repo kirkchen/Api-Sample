@@ -1,7 +1,9 @@
 ﻿using ApiSample.BL.Interfaces;
 using ApiSample.DA.Interfaces;
 using ApiSample.Models;
+using ApiSample.Utility.Extensions.Aop;
 using ApiSample.ViewModels;
+using Autofac.Extras.DynamicProxy2;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,8 @@ using System.Threading.Tasks;
 
 namespace ApiSample.BL.Services
 {
+    //[Intercept("RequireAdmin")]
+    //[Intercept(typeof(LogInterceptor))]        
     public class ProductService : IProductService
     {
         public IProductRepository ProductRepository { get; set; }
@@ -19,7 +23,7 @@ namespace ApiSample.BL.Services
         {
             this.ProductRepository = productRepository;
         }
-
+        
         public IEnumerable<ProductForCategoryModel> GetProductByCategoryId(int categoryId)
         {
             return this.ProductRepository.GetProductByCategoryId(categoryId);
