@@ -18,7 +18,8 @@ namespace ApiSample.Utility.Hooks.Test
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("刪除資料改為更新IsValid欄位功能", Description="提供給 DA層\r\n當系統進行Delete時，並不會真的刪除資料，而是以更新IsValid欄位為False取代\r\n這樣日後想回復資料時，可以方便取回", SourceFile="刪除資料改為更新IsValid欄位功能.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("刪除資料改為更新IsValid欄位功能", Description="提供給 DA層\r\n當系統進行Delete時，並不會真的刪除資料，而是以更新IsValid欄位為False取代\r\n這樣日後想回復資料時，可以方便取回", SourceFile="刪除資料改為更新IsValid欄位功能.feature", SourceLine=2)]
+    [TechTalk.SpecRun.IgnoreAttribute()]
     public partial class 刪除資料改為更新IsValid欄位功能Feature
     {
         
@@ -31,7 +32,8 @@ namespace ApiSample.Utility.Hooks.Test
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "刪除資料改為更新IsValid欄位功能", "提供給 DA層\r\n當系統進行Delete時，並不會真的刪除資料，而是以更新IsValid欄位為False取代\r\n這樣日後想回復資料時，可以方便取回", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "刪除資料改為更新IsValid欄位功能", "提供給 DA層\r\n當系統進行Delete時，並不會真的刪除資料，而是以更新IsValid欄位為False取代\r\n這樣日後想回復資料時，可以方便取回", ProgrammingLanguage.CSharp, new string[] {
+                        "ignore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,28 +66,28 @@ namespace ApiSample.Utility.Hooks.Test
         
         public virtual void FeatureBackground()
         {
-#line 7
 #line 8
+#line 9
  testRunner.Given("ShopContext刪除時會以更新IsValid為false取代", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當執行刪除資料時，以更新IsValid欄位為False取代", SourceLine=9)]
+        [TechTalk.SpecRun.ScenarioAttribute("當執行刪除資料時，以更新IsValid欄位為False取代", SourceLine=10)]
         public virtual void 當執行刪除資料時以更新IsValid欄位為False取代()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當執行刪除資料時，以更新IsValid欄位為False取代", ((string[])(null)));
-#line 10
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name"});
             table1.AddRow(new string[] {
                         "Fruits"});
-#line 11
+#line 12
  testRunner.Given("新增分類資料", ((string)(null)), table1, "假設");
-#line 14
+#line 15
  testRunner.When("執行刪除分類Fruits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -94,7 +96,7 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "Fruits",
                         "false"});
-#line 15
+#line 16
  testRunner.Then("資料庫中包含資料", ((string)(null)), table2, "那麼");
 #line hidden
             this.ScenarioCleanup();
