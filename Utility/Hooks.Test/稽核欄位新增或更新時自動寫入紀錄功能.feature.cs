@@ -18,7 +18,8 @@ namespace ApiSample.Utility.Hooks.Test
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("稽核欄位新增或更新時自動寫入紀錄功能", Description="提供給 DA層\r\n當資料欄位被標記為需要稽核時，當資料新增至Table或更新時，\r\n自動寫入稽核紀錄", SourceFile="稽核欄位新增或更新時自動寫入紀錄功能.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("稽核欄位新增或更新時自動寫入紀錄功能", Description="提供給 DA層\r\n當資料欄位被標記為需要稽核時，當資料新增至Table或更新時，\r\n自動寫入稽核紀錄", SourceFile="稽核欄位新增或更新時自動寫入紀錄功能.feature", SourceLine=2)]
+    [TechTalk.SpecRun.IgnoreAttribute()]
     public partial class 稽核欄位新增或更新時自動寫入紀錄功能Feature
     {
         
@@ -31,7 +32,8 @@ namespace ApiSample.Utility.Hooks.Test
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "稽核欄位新增或更新時自動寫入紀錄功能", "提供給 DA層\r\n當資料欄位被標記為需要稽核時，當資料新增至Table或更新時，\r\n自動寫入稽核紀錄", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "稽核欄位新增或更新時自動寫入紀錄功能", "提供給 DA層\r\n當資料欄位被標記為需要稽核時，當資料新增至Table或更新時，\r\n自動寫入稽核紀錄", ProgrammingLanguage.CSharp, new string[] {
+                        "ignore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,28 +66,28 @@ namespace ApiSample.Utility.Hooks.Test
         
         public virtual void FeatureBackground()
         {
-#line 7
 #line 8
- testRunner.Given("目前登入的使用者為Kirk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line 9
+ testRunner.Given("目前登入的使用者為Kirk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
+#line 10
  testRunner.And("ShopContext自動寫入稽核紀錄", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "並且");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當新增分類資料時，自動寫入一筆稽核紀錄，記錄新增值", SourceLine=10)]
+        [TechTalk.SpecRun.ScenarioAttribute("當新增分類資料時，自動寫入一筆稽核紀錄，記錄新增值", SourceLine=11)]
         public virtual void 當新增分類資料時自動寫入一筆稽核紀錄記錄新增值()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當新增分類資料時，自動寫入一筆稽核紀錄，記錄新增值", ((string[])(null)));
-#line 11
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name"});
             table1.AddRow(new string[] {
                         "Fruits"});
-#line 12
+#line 13
  testRunner.Given("新增分類資料", ((string)(null)), table1, "假設");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -94,7 +96,7 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "Fruits",
                         "true"});
-#line 15
+#line 16
  testRunner.Then("資料庫中包含資料", ((string)(null)), table2, "那麼");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -105,28 +107,28 @@ this.FeatureBackground();
                         "Category",
                         "",
                         "Fruits"});
-#line 18
+#line 19
  testRunner.And("稽核紀錄包含資料", ((string)(null)), table3, "並且");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當更新分類資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", SourceLine=21)]
+        [TechTalk.SpecRun.ScenarioAttribute("當更新分類資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", SourceLine=22)]
         public virtual void 當更新分類資料時自動寫入一筆稽核紀錄記錄舊值與新值()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當更新分類資料時，自動寫入一筆稽核紀錄，記錄舊值與新值", ((string[])(null)));
-#line 22
+#line 23
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name"});
             table4.AddRow(new string[] {
                         "Fruits"});
-#line 23
+#line 24
  testRunner.Given("新增分類資料", ((string)(null)), table4, "假設");
-#line 26
+#line 27
  testRunner.When("更新分類名字為Fruit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -135,7 +137,7 @@ this.FeatureBackground();
             table5.AddRow(new string[] {
                         "Fruit",
                         "true"});
-#line 27
+#line 28
  testRunner.Then("資料庫中包含資料", ((string)(null)), table5, "那麼");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -150,19 +152,19 @@ this.FeatureBackground();
                         "Category",
                         "Fruits",
                         "Fruit"});
-#line 30
+#line 31
  testRunner.And("稽核紀錄包含資料", ((string)(null)), table6, "並且");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("當新增商品資料時，自動寫入稽核紀錄，記錄新增值", SourceLine=34)]
+        [TechTalk.SpecRun.ScenarioAttribute("當新增商品資料時，自動寫入稽核紀錄，記錄新增值", SourceLine=35)]
         public virtual void 當新增商品資料時自動寫入稽核紀錄記錄新增值()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("當新增商品資料時，自動寫入稽核紀錄，記錄新增值", ((string[])(null)));
-#line 35
+#line 36
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 8
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -171,7 +173,7 @@ this.FeatureBackground();
             table7.AddRow(new string[] {
                         "1",
                         "Fruits"});
-#line 36
+#line 37
  testRunner.Given("新增分類資料", ((string)(null)), table7, "假設");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
@@ -204,7 +206,7 @@ this.FeatureBackground();
                         "2013-10-01",
                         "2014-10-01",
                         "true"});
-#line 39
+#line 40
  testRunner.And("新增商品資料", ((string)(null)), table8, "並且");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
@@ -213,7 +215,7 @@ this.FeatureBackground();
             table9.AddRow(new string[] {
                         "Fruits",
                         "true"});
-#line 43
+#line 44
  testRunner.Then("資料庫中包含資料", ((string)(null)), table9, "那麼");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -243,7 +245,7 @@ this.FeatureBackground();
                         "2013-10-01",
                         "2014-10-01",
                         "true"});
-#line 46
+#line 47
  testRunner.And("資料庫中包含商品資料", ((string)(null)), table10, "並且");
 #line hidden
             TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
@@ -270,7 +272,7 @@ this.FeatureBackground();
                         "Product",
                         "",
                         "40"});
-#line 50
+#line 51
  testRunner.And("稽核紀錄包含資料", ((string)(null)), table11, "並且");
 #line hidden
             this.ScenarioCleanup();
