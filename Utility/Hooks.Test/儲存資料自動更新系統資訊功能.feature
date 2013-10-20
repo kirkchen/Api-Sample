@@ -1,5 +1,4 @@
 ﻿#language: zh-TW
-@ignore
 功能: 儲存資料自動更新系統資訊功能
 	提供給 DA層
 	當系統進行Insert、Update時，自動更新系統欄位

@@ -18,8 +18,7 @@ namespace ApiSample.Utility.Extensions.Test
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("驗證輸入資料功能", Description="提供給 UI層\r\n當系統傳入資料時，若驗證失敗傳回錯誤訊息，驗證成功則繼續進行Action", SourceFile="驗證輸入資料功能.feature", SourceLine=2)]
-    [TechTalk.SpecRun.IgnoreAttribute()]
+    [TechTalk.SpecRun.FeatureAttribute("驗證輸入資料功能", Description="提供給 UI層\r\n當系統傳入資料時，若驗證失敗傳回錯誤訊息，驗證成功則繼續進行Action", SourceFile="驗證輸入資料功能.feature", SourceLine=1)]
     public partial class 驗證輸入資料功能Feature
     {
         
@@ -32,8 +31,7 @@ namespace ApiSample.Utility.Extensions.Test
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "驗證輸入資料功能", "提供給 UI層\r\n當系統傳入資料時，若驗證失敗傳回錯誤訊息，驗證成功則繼續進行Action", ProgrammingLanguage.CSharp, new string[] {
-                        "ignore"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "驗證輸入資料功能", "提供給 UI層\r\n當系統傳入資料時，若驗證失敗傳回錯誤訊息，驗證成功則繼續進行Action", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,33 +62,33 @@ namespace ApiSample.Utility.Extensions.Test
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("驗證失敗時，回傳驗證失敗訊息", SourceLine=6)]
+        [TechTalk.SpecRun.ScenarioAttribute("驗證失敗時，回傳驗證失敗訊息", SourceLine=5)]
         public virtual void 驗證失敗時回傳驗證失敗訊息()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("驗證失敗時，回傳驗證失敗訊息", ((string[])(null)));
-#line 7
+#line 6
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 7
  testRunner.Given("使用者輸入資料驗證失敗", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
-#line 9
+#line 8
  testRunner.When("觸發驗證使用者傳入資料時", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
-#line 10
+#line 9
  testRunner.Then("回傳驗證失敗訊息", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "那麼");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("驗證成功時，繼續執行Action", SourceLine=11)]
+        [TechTalk.SpecRun.ScenarioAttribute("驗證成功時，繼續執行Action", SourceLine=10)]
         public virtual void 驗證成功時繼續執行Action()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("驗證成功時，繼續執行Action", ((string[])(null)));
-#line 12
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 13
+#line 12
  testRunner.Given("使用者輸入資料驗證成功", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
-#line 14
+#line 13
  testRunner.When("觸發驗證使用者傳入資料時", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
-#line 15
+#line 14
  testRunner.Then("繼續執行Action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "那麼");
 #line hidden
             this.ScenarioCleanup();
