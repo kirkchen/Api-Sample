@@ -18,7 +18,8 @@ namespace ApiSample.Utility.Hooks.Test
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("儲存資料自動更新系統資訊功能", Description="提供給 DA層\r\n當系統進行Insert、Update時，自動更新系統欄位", SourceFile="儲存資料自動更新系統資訊功能.feature", SourceLine=1)]
+    [TechTalk.SpecRun.FeatureAttribute("儲存資料自動更新系統資訊功能", Description="提供給 DA層\r\n當系統進行Insert、Update時，自動更新系統欄位", SourceFile="儲存資料自動更新系統資訊功能.feature", SourceLine=2)]
+    [TechTalk.SpecRun.IgnoreAttribute()]
     public partial class 儲存資料自動更新系統資訊功能Feature
     {
         
@@ -31,7 +32,8 @@ namespace ApiSample.Utility.Hooks.Test
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "儲存資料自動更新系統資訊功能", "提供給 DA層\r\n當系統進行Insert、Update時，自動更新系統欄位", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("zh-TW"), "儲存資料自動更新系統資訊功能", "提供給 DA層\r\n當系統進行Insert、Update時，自動更新系統欄位", ProgrammingLanguage.CSharp, new string[] {
+                        "ignore"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,30 +66,30 @@ namespace ApiSample.Utility.Hooks.Test
         
         public virtual void FeatureBackground()
         {
-#line 6
 #line 7
- testRunner.Given("目前登入的使用者為Kirk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line 8
+ testRunner.Given("目前登入的使用者為Kirk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
+#line 9
  testRunner.And("ShopContext更新時會自動更新系統資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "並且");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("執行新增分類後，分類儲存會自動帶入使用者名稱", SourceLine=9)]
+        [TechTalk.SpecRun.ScenarioAttribute("執行新增分類後，分類儲存會自動帶入使用者名稱", SourceLine=10)]
         public virtual void 執行新增分類後分類儲存會自動帶入使用者名稱()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("執行新增分類後，分類儲存會自動帶入使用者名稱", ((string[])(null)));
-#line 10
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 6
+#line 7
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name"});
             table1.AddRow(new string[] {
                         "Fruits"});
-#line 11
+#line 12
  testRunner.Given("新增分類資料", ((string)(null)), table1, "假設");
-#line 14
+#line 15
  testRunner.When("新增完畢", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -98,30 +100,30 @@ this.FeatureBackground();
                         "Fruits",
                         "Kirk",
                         "Kirk"});
-#line 15
+#line 16
  testRunner.Then("資料庫中包含資料", ((string)(null)), table2, "那麼");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("執行更新分類後，分類更新資訊會自動帶入使用者名稱", SourceLine=18)]
+        [TechTalk.SpecRun.ScenarioAttribute("執行更新分類後，分類更新資訊會自動帶入使用者名稱", SourceLine=19)]
         public virtual void 執行更新分類後分類更新資訊會自動帶入使用者名稱()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("執行更新分類後，分類更新資訊會自動帶入使用者名稱", ((string[])(null)));
-#line 19
+#line 20
 this.ScenarioSetup(scenarioInfo);
-#line 6
+#line 7
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name"});
             table3.AddRow(new string[] {
                         "Fruits"});
-#line 20
+#line 21
  testRunner.Given("新增分類資料", ((string)(null)), table3, "假設");
-#line 23
-    testRunner.Given("更換使用者為David", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
 #line 24
+    testRunner.Given("更換使用者為David", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "假設");
+#line 25
  testRunner.When("更新分類名字為Fruit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "當");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -132,7 +134,7 @@ this.FeatureBackground();
                         "Fruit",
                         "Kirk",
                         "David"});
-#line 25
+#line 26
  testRunner.Then("資料庫中包含資料", ((string)(null)), table4, "那麼");
 #line hidden
             this.ScenarioCleanup();

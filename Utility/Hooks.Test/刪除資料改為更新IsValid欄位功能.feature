@@ -1,4 +1,5 @@
 ﻿#language: zh-TW
+@ignore
 功能: 刪除資料改為更新IsValid欄位功能
 	提供給 DA層
 	當系統進行Delete時，並不會真的刪除資料，而是以更新IsValid欄位為False取代
