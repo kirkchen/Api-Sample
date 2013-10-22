@@ -1,6 +1,7 @@
 ﻿using ApiSample.Utility.Extensions.Elmah;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,7 +17,7 @@ namespace ApiSample.UI.WebSite
 
             var namespaces = new[] { "Elmah.Mvc" };
             var elmahRoute = "Errors";
-            string allowedIps = "::1;127.0.0.1";
+            string allowedIps = ConfigurationManager.AppSettings["elmah.mvc.allowip"];
 
             routes.MapRoute(
                 "Elmah.Override",
