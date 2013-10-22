@@ -86,4 +86,3 @@ var ApiSample;
 
 var helper = new ApiSample.UtilHelper();
 ko.applyBindings(helper);
-//# sourceMappingURL=utilhelper.js.map
