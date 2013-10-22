@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ApiSample.DA.Tables.DatabaseInitializer
 {
-    public class DefaultConfiguration : DbMigrationsConfiguration<ShopContext>
+    public class DefaultDataConfiguration : DbMigrationsConfiguration<ShopContext>
     {
-        public DefaultConfiguration()
+        public DefaultDataConfiguration()
         {
             AutomaticMigrationsEnabled = true;
         }
@@ -33,25 +33,7 @@ namespace ApiSample.DA.Tables.DatabaseInitializer
                             Name= "User"
                         }
                     }
-                },
-                new User()
-                {
-                    Name = "John",
-                    Email = "john@test.com",
-                    Token = "222222",
-                    EncryptKey = "2222",
-                    Groups = new List<Group>()
-                    {
-                        new Group(){
-                            Name="Administrator"
-                        },
-                        new Group(){
-                            Name= "User"
-                        }
-                    }
-                }
-            );
-
+                });
         }
     }
 }

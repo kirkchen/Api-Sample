@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
-    <Compile Include="DatabaseInitializer\DefaultConfiguration.cs" />
+    <Compile Include="DatabaseInitializer\DefaultDataConfiguration.cs" />
     <Compile Include="DatabaseInitializer\DefaultDataInitializer.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="Gift.cs" />

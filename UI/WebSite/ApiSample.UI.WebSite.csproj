@@ -346,6 +346,7 @@
     <Content Include="Views\Util\Helper.cshtml" />
     <None Include="Web.Stage.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
